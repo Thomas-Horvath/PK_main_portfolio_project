@@ -1,0 +1,88 @@
+//fonts
+@font-face {
+    font-family: "Poppins-regular";
+    src: url(../fonts/Poppins-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Poppins-medium";
+    src: url(../fonts/Poppins-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Poppins-bold";
+    src: url(../fonts/Poppins-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Poppins-extrabold";
+    src: url(../fonts/Poppins-ExtraBold.ttf);
+    font-weight: 800;
+}
+@font-face {
+    font-family: "Poppins-black";
+    src: url(../fonts/Poppins-Black.ttf);
+    font-weight: 900;
+}
+@font-face {
+    font-family: "ProtestRiot";
+    src: url(../fonts/ProtestRiot-Regular.ttf);
+}
+
+
+
+ // main colors  
+ $main-color: #f5b32f;
+ $main-color-darker: #f3a70f;
+ $main-color-30: #f5b32f33;
+ $main-color-55: #f5b32f8c;
+ $main-color-75: #f5b32fbf;
+ $gray-100: #797979;
+ $black: #000;
+ $white-100: #ffffff;
+
+ // font family 
+ $font-family-poppins-regular: "Poppins-regular", sans-serif;
+ $font-family-poppins-medium: "Poppins-medium", sans-serif;
+ $font-family-poppins-bold: "Poppins-bold", sans-serif;
+ $font-family-poppins-extrabold: "Poppins-extrabold", sans-serif;
+ $font-family-poppins-black: "Poppins-black", sans-serif;
+ $font-family-protest: "ProtestRiot",  sans-serif;
+
+ // backgrounds 
+ $bg : #080f18;
+ $bg-header-dark: #191919;
+ $bg-light: var($white-100);
+ $bg-color: #0a0a0f;
+ $bg-dark: #191919;
+ $bg-dark-light: #1a1a1a;
+ $bg-dark-light-75: #00000097;
+ $bg-dark-lighter: rgb(33, 33, 33);
+ $bg-light-dark: #cccccc;
+ $bg-light-darker: #2A2A30;
+ $bg-portfolio: #3f3f3f;
+
+ // progress bar 
+ $pg-dark: #444;
+ $pg-dark-75: #111111ba;
+ $pg-light: #777;
+
+ //  btn color 
+ $btn-color-light: #fafaff;
+ $btn-color-dark: #111111;
+
+ //  box shadows 
+ $box-shadow-light: 0 -5px 20px $main-color-30;
+ $box-shadow-dirk: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+ // text color 
+ $text-color-light: #F1F5F2;
+ $text-grey: #333;
+ $text-grey-light: #666;
+ $small-menu-border: #ffffff25;
+
+ // linear gradient 
+ $blog-linear: linear-gradient(135deg, $main-color-30, $main-color-30);
+ $footer-linear: linear-gradient(135deg,$main-color-55 25%, $main-color-30 ,  #11111166 );
+ $portfolio-linear: linear-gradient(135deg,  $main-color,$main-color-55,#444,#333, #000);
+ $bg-linear-gradient: linear-gradient(rgba(10, 10, 10, 0.7), rgb(10, 10, 10)), url(../assets/img/BG-gray.jpg) center/cover;

@@ -1,0 +1,16 @@
+.blog {
+    padding: 5rem 0 2rem;
+    background: var(--bg-dark-light);
+}
+
+.blogContent {
+    margin-top: 2rem;
+    padding-top: 4rem;
+    min-height: 70vh;
+    width: 100%;
+    background-image: $blog-linear, url('../assets/img/blog-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}

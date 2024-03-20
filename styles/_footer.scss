@@ -1,0 +1,16 @@
+.footer {
+    min-height: 16rem;
+    background: $footer-linear, url("../assets/img/footer_dark.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 1rem 2rem .5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    img{ 
+        width: 30px;
+    }
+}

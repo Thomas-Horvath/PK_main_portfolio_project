@@ -1,0 +1,52 @@
+//*  =========================== qoute section ============================================*/
+.quote {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 3rem 3rem;
+
+    min-height: 430px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('../assets/img/qoute_section-bg.jpg');
+    background-size: cover/contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: 1;
+    overflow: hidden;
+
+
+}
+
+.quote::before {
+    content: "";
+    position: absolute;
+    /* width: 0;
+    height: 0; */
+    border-style: solid;
+    border-width: 0 0 30px 100vw;
+    /* Felülről, jobbról, alulról, balról */
+    border-color: transparent transparent transparent $bg-dark-light;
+    /* Átlátszó, a háromszög színe, átlátszó, átlátszó */
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+}
+
+.quote::after {
+    content: "";
+    position: absolute;
+
+    border-style: solid;
+    border-width: 0 0 30px 100vw;
+    /* Felülről, jobbról, alulról, balról */
+    border-color: transparent transparent $bg-dark-light transparent;
+    /* Átlátszó, a háromszög színe, átlátszó, átlátszó */
+    bottom: 0px;
+    right: 0;
+    z-index: 100;
+}

@@ -1,0 +1,14 @@
+.portfolio-wrapper {
+    margin-top: 2rem;
+    min-height: 100vh;
+    background-image: linear-gradient(rgb(0,0,0), rgba(0,0,0,.1)), url("../assets/img/portfolio-bg 1.png");
+ 
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--box-shadow-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

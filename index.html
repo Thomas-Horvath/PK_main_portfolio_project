@@ -16,7 +16,7 @@
     <title>ThomasHorvath.Hu - Webfejlesztés</title>
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="./assets/icons/favicon/logo_favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/icons/favicon/Logo_Thomas_main_color.svg" type="image/x-icon">
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -44,22 +44,22 @@
     <header class="header">
         <div class="header-container">
 
-            <a class="logo" href="#"><img class="nav-logo-img" src="./assets/img/Logo_Thomas_light.png"
+            <a class="logo" href="#"><img class="nav-logo-img js-main-logo" src="./assets/img/Logo_Thomas_light.png"
                     alt="fehér színű logó"></a>
 
 
             <!--  NAVIGATION  -->
-            <nav class="nav">
-                <img class="nav-logo-img" src="./assets/img/Logo_Thomas_blue.png" alt="kék színű logó">
+            <nav class="nav js-nav">
+                <img class="nav-logo-img" src="./assets/img/Logo_Thomas_main_color.svg" alt="arany színűl ogó">
                 <ul class="nav-links">
-                    <li><a class="nav-link active" href="#home">Kezdőlap</a></li>
-                    <li><a class="nav-link" href="#about">Rólam</a></li>
-                    <li><a class="nav-link" href="#skills">Ismereteim</a></li>
-                    <li><a class="nav-link" href="#portfolio">Munkáim</a></li>
-                    <li><a class="nav-link" href="#blog">Blog</a></li>
-                    <li><a class="nav-link" href="#contact">Kapcsolat</a></li>
+                    <li><a class="nav-link js-nav-link active" href="#home">Kezdőlap</a></li>
+                    <li><a class="nav-link js-nav-link" href="#about">Rólam</a></li>
+                    <li><a class="nav-link js-nav-link" href="#skills">Ismereteim</a></li>
+                    <li><a class="nav-link js-nav-link" href="#portfolio">Munkáim</a></li> 
+                    <li><a class="nav-link js-nav-link" href="#blog">Blog</a></li>
+                    <li><a class="nav-link js-nav-link" href="#contact">Kapcsolat</a></li>
                 </ul>
-                <i class="fa-solid fa-xmark hamburger-btn-close"></i>
+                <i class="fa-solid fa-xmark hamburger-btn-close js-hamburger-close-btn"></i>
             </nav>
 
 
@@ -68,9 +68,11 @@
                     <i class="bi bi-brightness-high-fill"></i>
                 </div>
                 <!-- dark mode icon : <i class="bi bi-moon-stars-fill"></i> -->
-                <a href="./en/index.html"><img src="./assets/img/great-britain-flag.png" alt="angol zászló"></a>
                 <div class="icon-container">
-                    <i class="fa-solid fa-bars hamburger-btn-open"></i>
+                    <a href="./en/index.html"><img src="./assets/img/great-britain-flag.png" alt="angol zászló"></a>
+                </div>
+                <div class="icon-container hamburger-btn-open js-hamburger-open-btn">
+                    <i class="fa-solid fa-bars "></i>
                 </div>
             </div>
         </div>
@@ -85,7 +87,7 @@
     <!-- ************************* MAIN SECTION ******************************** -->
     <main>
 
-        <section class="home">
+        <section class="home" id="home">
             <h1>Horváth Tamás</h1>
             <div class="content-container">
                 <p>Full-Stack webfejlesztő,</p>
@@ -151,9 +153,10 @@
                             haladó szintű elsajátítása mellett jelenlegi célom a back-end oldal megismerése, amellyel
                             teljes rendszereket tudok majd megvalósítani a webfejlesztés platformján.
                         </p>
-                        <a href="#" class="btn about-btn">Ismerj meg jobban!<i class="ri-arrow-right-line"></i></a>
+                        <a href="#" class="btn about-btn">Ismerj meg jobban!<i class="fa-solid fa-arrow-right"></i></a>
                         <a download target="_blank" href="./assets/download/CV_2023hu.pdf" class="btn"><i
-                                class="ri-download-2-fill"></i>
+                                class="fa-solid fa-file-arrow-down"></i>
+
                             Tölsd le az önéletrajzom</a>
                     </div>
                 </div>
@@ -213,13 +216,13 @@
                             <div class="skills-group">
                                 <h4>HTML - CSS - Javascript</h4>
                             </div>
-                            <div class="btn btn-portfolio">Részletek <i class="ri-arrow-right-fill"></i></div>
+                            <div class="btn btn-portfolio">Részletek <i class="fa-solid fa-arrow-right"></i></div>
                         </div>
                         <div class="portfolio-popup-wrapper">
                             <div class="popup-container">
                                 <div class="p-header">
                                     <h2>Bőrdíszműves - portfólió oldal</h2>
-                                    <div class="close-btn"><i class="ri-close-circle-line"></i></div>
+                                    <div class="close-btn"><i class="fa-regular fa-circle-xmark"></i></div>
                                 </div>
                                 <div class="p-popup-content">
                                     <div class="p-left">
@@ -243,11 +246,12 @@
                                         </div>
                                         <div class="p-btn-group">
                                             <a href="https://github.com/Thomas-Horvath/ProgramozasKarrier-Kihivas_2023September"
-                                                target="_blank" class="btn popup-btn"><i
-                                                    class="ri-github-fill"></i>Github</a>
+                                                target="_blank" class="btn popup-btn">
+                                                <i class="fa-brands fa-github"></i>
+                                                Github</a>
                                             <a href="https://thomas-horvath.github.io/ProgramozasKarrier-Kihivas_2023September/"
-                                                target="_blank" class="btn popup-btn"><i
-                                                    class="ri-computer-line"></i>Nézd meg</a>
+                                                target="_blank" class="btn popup-btn">
+                                                <i class="fa-solid fa-desktop"></i>Nézd meg</a>
                                         </div>
                                     </div>
                                 </div>
@@ -276,14 +280,14 @@
                             <div class="skills-group">
                                 <h4>HTML - CSS - Javascript</h4>
                             </div>
-                            <div class="btn btn-portfolio">Részletek<i class="ri-arrow-right-fill"></i></div>
+                            <div class="btn btn-portfolio">Részletek<i class="fa-solid fa-arrow-right"></i></div>
                         </div>
 
                         <div class="portfolio-popup-wrapper">
                             <div class="popup-container">
                                 <div class="p-header">
                                     <h2>Bőrdíszműves - portfólió oldal</h2>
-                                    <div class="close-btn"><i class="ri-close-circle-line"></i></div>
+                                    <div class="close-btn"><i class="fa-regular fa-circle-xmark"></i></div>
                                 </div>
                                 <div class="p-popup-content">
                                     <div class="p-left">
@@ -306,10 +310,11 @@
                                             </ul>
                                         </div>
                                         <div class="p-btn-group">
-                                            <a href="" target="_blank" class="btn popup-btn"><i
-                                                    class="ri-github-fill"></i>Github</a>
-                                            <a href="" target="_blank" class="btn popup-btn"><i
-                                                    class="ri-computer-line"></i>Nézd meg</a>
+                                            <a href="" target="_blank" class="btn popup-btn">
+                                                <i class="fa-brands fa-github"></i>
+                                                Github</a>
+                                            <a href="" target="_blank" class="btn popup-btn">
+                                                <i class="fa-solid fa-desktop"></i>Nézd meg</a>
                                         </div>
                                     </div>
                                 </div>
@@ -337,13 +342,13 @@
                             <div class="skills-group">
                                 <h4>HTML - CSS - Javascript</h4>
                             </div>
-                            <div class="btn btn-portfolio">Részletek<i class="ri-arrow-right-fill"></i></div>
+                            <div class="btn btn-portfolio">Részletek<i class="fa-solid fa-arrow-right"></i></div>
                         </div>
                         <div class="portfolio-popup-wrapper">
                             <div class="popup-container">
                                 <div class="p-header">
                                     <h2>Bőrdíszműves - portfólió oldal</h2>
-                                    <div class="close-btn"><i class="ri-close-circle-line"></i></div>
+                                    <div class="close-btn"><i class="fa-regular fa-circle-xmark"></i></div>
                                 </div>
                                 <div class="p-popup-content">
                                     <div class="p-left">
@@ -366,10 +371,10 @@
                                             </ul>
                                         </div>
                                         <div class="p-btn-group">
-                                            <a href="" target="_blank" class="btn popup-btn"><i
-                                                    class="ri-github-fill"></i>Github</a>
-                                            <a href="" target="_blank" class="btn popup-btn"><i
-                                                    class="ri-computer-line"></i>Nézd meg</a>
+                                            <a href="" target="_blank" class="btn popup-btn">
+                                                <i class="fa-brands fa-github"></i> Github</a>
+                                            <a href="" target="_blank" class="btn popup-btn">
+                                                <i class="fa-solid fa-desktop"></i>Nézd meg</a>
                                         </div>
                                     </div>
                                 </div>
@@ -397,13 +402,13 @@
                             <div class="skills-group">
                                 <h4>HTML - CSS - Javascript</h4>
                             </div>
-                            <div class="btn btn-portfolio">Részletek<i class="ri-arrow-right-fill"></i></div>
+                            <div class="btn btn-portfolio">Részletek<i class="fa-solid fa-arrow-right"></i></div>
                         </div>
                         <div class="portfolio-popup-wrapper">
                             <div class="popup-container">
                                 <div class="p-header">
                                     <h2>Bőrdíszműves - portfólió oldal</h2>
-                                    <div class="close-btn"><i class="ri-close-circle-line"></i></div>
+                                    <div class="close-btn"><i class="fa-regular fa-circle-xmark"></i></div>
                                 </div>
                                 <div class="p-popup-content">
                                     <div class="p-left">
@@ -426,10 +431,10 @@
                                             </ul>
                                         </div>
                                         <div class="p-btn-group">
-                                            <a href="" target="_blank" class="btn popup-btn"><i
-                                                    class="ri-github-fill"></i>Github</a>
-                                            <a href="" target="_blank" class="btn popup-btn"><i
-                                                    class="ri-computer-line"></i>Nézd meg</a>
+                                            <a href="" target="_blank" class="btn popup-btn">
+                                                <i class="fa-brands fa-github"></i>Github</a>
+                                            <a href="" target="_blank" class="btn popup-btn">
+                                                <i class="fa-solid fa-desktop"></i>Nézd meg</a>
                                         </div>
                                     </div>
                                 </div>
@@ -457,13 +462,13 @@
                             <div class="skills-group">
                                 <h4>HTML - CSS - Javascript</h4>
                             </div>
-                            <div class="btn btn-portfolio">Részletek<i class="ri-arrow-right-fill"></i></div>
+                            <div class="btn btn-portfolio">Részletek<i class="fa-solid fa-arrow-right"></i></div>
                         </div>
                         <div class="portfolio-popup-wrapper">
                             <div class="popup-container">
                                 <div class="p-header">
                                     <h2>Bőrdíszműves - portfólió oldal</h2>
-                                    <div class="close-btn"><i class="ri-close-circle-line"></i></div>
+                                    <div class="close-btn"><i class="fa-regular fa-circle-xmark"></i></div>
                                 </div>
                                 <div class="p-popup-content">
                                     <div class="p-left">
@@ -486,10 +491,10 @@
                                             </ul>
                                         </div>
                                         <div class="p-btn-group">
-                                            <a href="" target="_blank" class="btn popup-btn"><i
-                                                    class="ri-github-fill"></i>Github</a>
-                                            <a href="" target="_blank" class="btn popup-btn"><i
-                                                    class="ri-computer-line"></i>Nézd meg</a>
+                                            <a href="" target="_blank" class="btn popup-btn">
+                                                <i class="fa-brands fa-github"></i>Github</a>
+                                            <a href="" target="_blank" class="btn popup-btn">
+                                                <i class="fa-solid fa-desktop"></i>Nézd meg</a>
                                         </div>
                                     </div>
                                 </div>
@@ -517,13 +522,13 @@
                             <div class="skills-group">
                                 <h4>HTML - CSS - Javascript</h4>
                             </div>
-                            <div class="btn btn-portfolio">Részletek<i class="ri-arrow-right-fill"></i></div>
+                            <div class="btn btn-portfolio">Részletek<i class="fa-solid fa-arrow-right"></i></div>
                         </div>
                         <div class="portfolio-popup-wrapper">
                             <div class="popup-container">
                                 <div class="p-header">
                                     <h2>Bőrdíszműves - portfólió oldal</h2>
-                                    <div class="close-btn"><i class="ri-close-circle-line"></i></div>
+                                    <div class="close-btn"><i class="fa-regular fa-circle-xmark"></i></div>
                                 </div>
                                 <div class="p-popup-content">
                                     <div class="p-left">
@@ -546,10 +551,10 @@
                                             </ul>
                                         </div>
                                         <div class="p-btn-group">
-                                            <a href="" target="_blank" class="btn popup-btn"><i
-                                                    class="ri-github-fill"></i>Github</a>
-                                            <a href="" target="_blank" class="btn popup-btn"><i
-                                                    class="ri-computer-line"></i>Demo</a>
+                                            <a href="" target="_blank" class="btn popup-btn">
+                                                <i class="fa-brands fa-github"></i>Github</a>
+                                            <a href="" target="_blank" class="btn popup-btn">
+                                                <i class="fa-solid fa-desktop"></i>Demo</a>
                                         </div>
                                     </div>
                                 </div>
@@ -648,8 +653,8 @@
                             <div class="form-status-box">
                                 <p></p>
                             </div>
-                            <button type="submit" name="submit" class="btn btn-contact"><i
-                                    class="ri-send-plane-fill"></i>Küldés</button>
+                            <button type="submit" name="submit" class="btn btn-contact">
+                                <i class="fa-solid fa-paper-plane"></i>Küldés</button>
                         </div>
                     </form>
                 </div>
