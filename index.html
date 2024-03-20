@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Horváth Tamás vagyok, junior frontend fejlesztő és Adatbázis
+        Specialista.">
+
+    <!-- Dark Light MODE -->
+    <script src="./scripts/theme.js"></script>
+    <script>
+        const theme = new Theme("dark");
+        theme.init();
+    </script>
+    <title>ThomasHorvath.Hu - Webfejlesztés</title>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./assets/icons/favicon/logo_favicon.svg" type="image/x-icon">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!--  EMAILJS SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!--  BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS NORMALIZE -->
+    <link rel="stylesheet" href="./styles/normalize.css">
+
+
+    <!-- MAIN STYLESHEET -->
+    <link rel="stylesheet" href="./styles/style.css">
+
+
+</head>
+
+<body>
+
+    <!-- ************************* HEADER SECTION ******************************** -->
+
+    <header class="header">
+        <div class="header-container">
+
+            <a class="logo" href="#"><img class="nav-logo-img" src="./assets/img/Logo_Thomas_light.png"
+                    alt="fehér színű logó"></a>
+
+
+            <!--  NAVIGATION  -->
+            <nav class="nav">
+                <img class="nav-logo-img" src="./assets/img/Logo_Thomas_blue.png" alt="kék színű logó">
+                <ul class="nav-links">
+                    <li><a class="nav-link active" href="#home">Kezdőlap</a></li>
+                    <li><a class="nav-link" href="#about">Rólam</a></li>
+                    <li><a class="nav-link" href="#skills">Ismereteim</a></li>
+                    <li><a class="nav-link" href="#portfolio">Munkáim</a></li>
+                    <li><a class="nav-link" href="#blog">Blog</a></li>
+                    <li><a class="nav-link" href="#contact">Kapcsolat</a></li>
+                </ul>
+                <i class="fa-solid fa-xmark hamburger-btn-close"></i>
+            </nav>
+
+
+            <div class="icons">
+                <div class="icon-container">
+                    <i class="bi bi-brightness-high-fill"></i>
+                </div>
+                <!-- dark mode icon : <i class="bi bi-moon-stars-fill"></i> -->
+                <a href="./en/index.html"><img src="./assets/img/great-britain-flag.png" alt="angol zászló"></a>
+                <div class="icon-container">
+                    <i class="fa-solid fa-bars hamburger-btn-open"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <!-- ************************* MAIN SECTION ******************************** -->
+    <main>
+
+        <section class="home">
+            <h1>Horváth Tamás</h1>
+            <div class="content-container">
+                <p>Full-Stack webfejlesztő,</p>
+                <p>Adatbázis specialista</p>
+            </div>
+            <h3>Kódolj szépséget, hozz létre élményt!</h3>
+
+            <a href="#contact" class="btn"><i class="fa-solid fa-paper-plane"></i>Küldj üzenetet</a>
+
+            <div class="home-social-media">
+                <a class="soc-icon" href="https://www.facebook.com/ThomasHorvathTheGuitarist" target="_blank">
+                    <i class="bi bi-facebook"></i></a>
+                <a class="soc-icon" href="https://www.instagram.com/thomas.theguitarist/" target="_blank">
+                    <i class="bi bi-instagram"></i></a>
+                <a class="soc-icon" href="https://www.linkedin.com/in/thomas-horvath-8886b2273/" target="_blank">
+                    <i class="bi bi-linkedin"></i></a>
+                <a class="soc-icon" href="https://github.com/Thomas-Horvath" target="_blank">
+                    <i class="bi bi-github"></i></a>
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- about section -->
+        <section class="about section-link" id="about">
+            <div class="main-heading">
+                <h2>Néhány szó</h2>
+                <span>Rólam</span>
+            </div>
+            <div class="about-container">
+                <div class="about-left">
+                    <div class="about-img">
+                        <img src="./assets/img/Profil_pic_BG.webp" alt="profilkép">
+                    </div>
+                </div>
+                <div class="about-right">
+                    <div class="about-section">
+                        <h3>Engedd meg, hogy néhány sorban bemutatkozzam!</h3>
+                        <p><strong>Horváth Tamás</strong> vagyok, eredetileg zenész, zeneszerző, alkotó. A
+                            webfejlesztéssel 2022-ben
+                            kezdtem komolyabban foglalkozni.</p>
+                        <p>Szeretek alkotni, a tanulás a hobbim. Szeretem a logikusan felépülő rendszereket. A precízen,
+                            tökéletességre törekdve ugyanakkor kreatívan megoldandó feladatokat.</p>
+                        <p><strong>2022 tavaszán</strong> az Újratervezés program keretében lehetőséget kaptam az IT
+                            világába való
+                            betekintésre. A <strong>rendszerüzemeltető </strong>képzés során elsajátítottam a
+                            számítástechnika
+                            alapelveit, a hálózatüzemeltetés alapjait, valamint a kliens (Windows, Linux) és szerver
+                            oldali (Windows Server, Linux Server) operációs rendszerek, virtuális gépek (Hyper-V,
+                            Docker) és cloud platformok (Azure, AWS) szolgáltatásainak felépítését, használatát és
+                            üzemeltetését.</p>
+                        <p>Ezt követően <strong>adatbázis specialista </strong>képzésen vettem részt, ahol haladó
+                            szinten elsajátítottam
+                            az SQL nyelvet, valamint a különböző adatbázis szoftverek (MS SQL, MySQL, MongoDB)
+                            használatát, konfigurálását és üzemeltetését. Ezen kívül elsajátítottam az adatbázisok
+                            tervezését és optimalizálását is.</p>
+                        <p>Folyamatos tanulás iránti elkötelezettségemnek köszönhetően, és mivel mindig a teljes képet
+                            szeretem látni, <strong>full-stack fejlesztő </strong>karrier felé vettem az irányt. A
+                            <strong>front-end fejlesztés</strong>
+                            haladó szintű elsajátítása mellett jelenlegi célom a back-end oldal megismerése, amellyel
+                            teljes rendszereket tudok majd megvalósítani a webfejlesztés platformján.
+                        </p>
+                        <a href="#" class="btn about-btn">Ismerj meg jobban!<i class="ri-arrow-right-line"></i></a>
+                        <a download target="_blank" href="./assets/download/CV_2023hu.pdf" class="btn"><i
+                                class="ri-download-2-fill"></i>
+                            Tölsd le az önéletrajzom</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of about section -->
+
+
+
+        <!-- qoute section  -->
+        <section class="quote">
+            <p>"Ne csak dolgozz, alkoss is valamit. Az igazi siker abban rejlik, ha szereted, amit csinálsz." </p>
+            <p>- Dale Carnegie</p>
+        </section>
+        <!-- end of quote section -->
+
+        <!-- skills section -->
+        <section class="skills section-link" id="skills">
+            <div class="main-heading">
+                <h2>Készségek</h2>
+                <span>Amikkel rendelkezem</span>
+            </div>
+            <div class="skill-category">
+
+            </div>
+
+        </section>
+
+
+        <!-- end of skill section -->
+
+        <section class="portfolio section-link" id="portfolio">
+            <div class="main-heading">
+                <h2>portfólió</h2>
+                <span>Néhány projektem</span>
+            </div>
+            <div class="portfolio-wrapper">
+                <div class="portfolio-box-container">
+
+
+                    <!-- portfolió 1 -->
+                    <div class="portfolio-box">
+                        <div class="head-wrapper">
+                            <div class="p-box-header">
+                                <div class="p-box-title">
+                                    <h2>Varázslóiskola - Játék App</h2>
+                                </div>
+                            </div>
+                            <div class="p-box-img-wrapper">
+                                <img src="./img/projects/html-system-website-concept.jpg" alt="projekt címlap kép"
+                                    class="p-box-img">
+                            </div>
+                        </div>
+                        <div class="p-box-contain">
+                            <div class="p-box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusantium, delectus.</div>
+                            <div class="skills-group">
+                                <h4>HTML - CSS - Javascript</h4>
+                            </div>
+                            <div class="btn btn-portfolio">Részletek <i class="ri-arrow-right-fill"></i></div>
+                        </div>
+                        <div class="portfolio-popup-wrapper">
+                            <div class="popup-container">
+                                <div class="p-header">
+                                    <h2>Bőrdíszműves - portfólió oldal</h2>
+                                    <div class="close-btn"><i class="ri-close-circle-line"></i></div>
+                                </div>
+                                <div class="p-popup-content">
+                                    <div class="p-left">
+                                        <div class="popup-img">
+                                            <img src="./img/projects/preview1.png" alt="projektet bemutató kép">
+                                        </div>
+                                    </div>
+                                    <div class="p-right">
+                                        <div class="p-description">
+                                            <h3>Ez lesz egy címsor</h3>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas nisi
+                                                eligendi
+                                                minima exercitationem velit aut quis, voluptatum quisquam in enim
+                                                magni
+                                                saepe. Consequatur, eligendi voluptate?</p>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                            </ul>
+                                        </div>
+                                        <div class="p-btn-group">
+                                            <a href="https://github.com/Thomas-Horvath/ProgramozasKarrier-Kihivas_2023September"
+                                                target="_blank" class="btn popup-btn"><i
+                                                    class="ri-github-fill"></i>Github</a>
+                                            <a href="https://thomas-horvath.github.io/ProgramozasKarrier-Kihivas_2023September/"
+                                                target="_blank" class="btn popup-btn"><i
+                                                    class="ri-computer-line"></i>Nézd meg</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- portfolió 2-->
+                    <div class="portfolio-box">
+                        <div class="head-wrapper">
+                            <div class="p-box-header">
+                                <div class="p-box-title">
+                                    <h2>Bőrdíszműves Portfolió</h2>
+                                </div>
+                            </div>
+                            <div class="p-box-img-wrapper">
+                                <img src="./img/projects/html-system-website-concept.jpg" alt="" class="p-box-img">
+                            </div>
+                        </div>
+                        <div class="p-box-contain">
+                            <div class="p-box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusantium, delectus.</div>
+                            <div class="skills-group">
+                                <h4>HTML - CSS - Javascript</h4>
+                            </div>
+                            <div class="btn btn-portfolio">Részletek<i class="ri-arrow-right-fill"></i></div>
+                        </div>
+
+                        <div class="portfolio-popup-wrapper">
+                            <div class="popup-container">
+                                <div class="p-header">
+                                    <h2>Bőrdíszműves - portfólió oldal</h2>
+                                    <div class="close-btn"><i class="ri-close-circle-line"></i></div>
+                                </div>
+                                <div class="p-popup-content">
+                                    <div class="p-left">
+                                        <div class="popup-img">
+                                            <img src="./img/projects/html-system-website-concept.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="p-right">
+                                        <div class="p-description">
+                                            <h3>Ez lesz egy címsor</h3>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas nisi
+                                                eligendi
+                                                minima exercitationem velit aut quis, voluptatum quisquam in enim
+                                                magni
+                                                saepe. Consequatur, eligendi voluptate?</p>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                            </ul>
+                                        </div>
+                                        <div class="p-btn-group">
+                                            <a href="" target="_blank" class="btn popup-btn"><i
+                                                    class="ri-github-fill"></i>Github</a>
+                                            <a href="" target="_blank" class="btn popup-btn"><i
+                                                    class="ri-computer-line"></i>Nézd meg</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- portfolió 3 -->
+                    <div class="portfolio-box">
+                        <div class="head-wrapper">
+                            <div class="p-box-header">
+                                <div class="p-box-title">
+                                    <h2>Hangszerbolt Weblap</h2>
+                                </div>
+                            </div>
+                            <div class="p-box-img-wrapper">
+                                <img src="./img/projects/html-system-website-concept.jpg" alt="" class="p-box-img">
+                            </div>
+                        </div>
+                        <div class="p-box-contain">
+                            <div class="p-box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusantium, delectus.</div>
+                            <div class="skills-group">
+                                <h4>HTML - CSS - Javascript</h4>
+                            </div>
+                            <div class="btn btn-portfolio">Részletek<i class="ri-arrow-right-fill"></i></div>
+                        </div>
+                        <div class="portfolio-popup-wrapper">
+                            <div class="popup-container">
+                                <div class="p-header">
+                                    <h2>Bőrdíszműves - portfólió oldal</h2>
+                                    <div class="close-btn"><i class="ri-close-circle-line"></i></div>
+                                </div>
+                                <div class="p-popup-content">
+                                    <div class="p-left">
+                                        <div class="popup-img">
+                                            <img src="./img/projects/html-system-websites-concept.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="p-right">
+                                        <div class="p-description">
+                                            <h3>Ez lesz egy címsor</h3>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas nisi
+                                                eligendi
+                                                minima exercitationem velit aut quis, voluptatum quisquam in enim
+                                                magni
+                                                saepe. Consequatur, eligendi voluptate?</p>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                            </ul>
+                                        </div>
+                                        <div class="p-btn-group">
+                                            <a href="" target="_blank" class="btn popup-btn"><i
+                                                    class="ri-github-fill"></i>Github</a>
+                                            <a href="" target="_blank" class="btn popup-btn"><i
+                                                    class="ri-computer-line"></i>Nézd meg</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- portfolió 4 -->
+                    <div class="portfolio-box">
+                        <div class="head-wrapper">
+                            <div class="p-box-header">
+                                <div class="p-box-title">
+                                    <h2>Angol szókártyák App</h2>
+                                </div>
+                            </div>
+                            <div class="p-box-img-wrapper">
+                                <img src="./img/projects/html-system-website-concept.jpg" alt="" class="p-box-img">
+                            </div>
+                        </div>
+                        <div class="p-box-contain">
+                            <div class="p-box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusantium, delectus.</div>
+                            <div class="skills-group">
+                                <h4>HTML - CSS - Javascript</h4>
+                            </div>
+                            <div class="btn btn-portfolio">Részletek<i class="ri-arrow-right-fill"></i></div>
+                        </div>
+                        <div class="portfolio-popup-wrapper">
+                            <div class="popup-container">
+                                <div class="p-header">
+                                    <h2>Bőrdíszműves - portfólió oldal</h2>
+                                    <div class="close-btn"><i class="ri-close-circle-line"></i></div>
+                                </div>
+                                <div class="p-popup-content">
+                                    <div class="p-left">
+                                        <div class="popup-img">
+                                            <img src="./img/projects/R.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="p-right">
+                                        <div class="p-description">
+                                            <h3>Ez lesz egy címsor</h3>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas nisi
+                                                eligendi
+                                                minima exercitationem velit aut quis, voluptatum quisquam in enim
+                                                magni
+                                                saepe. Consequatur, eligendi voluptate?</p>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                            </ul>
+                                        </div>
+                                        <div class="p-btn-group">
+                                            <a href="" target="_blank" class="btn popup-btn"><i
+                                                    class="ri-github-fill"></i>Github</a>
+                                            <a href="" target="_blank" class="btn popup-btn"><i
+                                                    class="ri-computer-line"></i>Nézd meg</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- portfolió 5 -->
+                    <div class="portfolio-box">
+                        <div class="head-wrapper">
+                            <div class="p-box-header">
+                                <div class="p-box-title">
+                                    <h2>Számológép App</h2>
+                                </div>
+                            </div>
+                            <div class="p-box-img-wrapper">
+                                <img src="./img/projects/html-system-website-concept.jpg" alt="" class="p-box-img">
+                            </div>
+                        </div>
+                        <div class="p-box-contain">
+                            <div class="p-box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusantium, delectus.</div>
+                            <div class="skills-group">
+                                <h4>HTML - CSS - Javascript</h4>
+                            </div>
+                            <div class="btn btn-portfolio">Részletek<i class="ri-arrow-right-fill"></i></div>
+                        </div>
+                        <div class="portfolio-popup-wrapper">
+                            <div class="popup-container">
+                                <div class="p-header">
+                                    <h2>Bőrdíszműves - portfólió oldal</h2>
+                                    <div class="close-btn"><i class="ri-close-circle-line"></i></div>
+                                </div>
+                                <div class="p-popup-content">
+                                    <div class="p-left">
+                                        <div class="popup-img">
+                                            <img src="./img/projects/Project.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="p-right">
+                                        <div class="p-description">
+                                            <h3>Ez lesz egy címsor</h3>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas nisi
+                                                eligendi
+                                                minima exercitationem velit aut quis, voluptatum quisquam in enim
+                                                magni
+                                                saepe. Consequatur, eligendi voluptate?</p>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                            </ul>
+                                        </div>
+                                        <div class="p-btn-group">
+                                            <a href="" target="_blank" class="btn popup-btn"><i
+                                                    class="ri-github-fill"></i>Github</a>
+                                            <a href="" target="_blank" class="btn popup-btn"><i
+                                                    class="ri-computer-line"></i>Nézd meg</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- portfolió 6 -->
+                    <div class="portfolio-box">
+                        <div class="head-wrapper">
+                            <div class="p-box-header">
+                                <div class="p-box-title">
+                                    <h2>Hangszerbolt Adatbázis</h2>
+                                </div>
+                            </div>
+                            <div class="p-box-img-wrapper">
+                                <img src="./img/projects/html-system-website-concept.jpg" alt="" class="p-box-img">
+                            </div>
+                        </div>
+                        <div class="p-box-contain">
+                            <div class="p-box-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Accusantium, delectus.</div>
+                            <div class="skills-group">
+                                <h4>HTML - CSS - Javascript</h4>
+                            </div>
+                            <div class="btn btn-portfolio">Részletek<i class="ri-arrow-right-fill"></i></div>
+                        </div>
+                        <div class="portfolio-popup-wrapper">
+                            <div class="popup-container">
+                                <div class="p-header">
+                                    <h2>Bőrdíszműves - portfólió oldal</h2>
+                                    <div class="close-btn"><i class="ri-close-circle-line"></i></div>
+                                </div>
+                                <div class="p-popup-content">
+                                    <div class="p-left">
+                                        <div class="popup-img">
+                                            <img src="./img/projects/R.jpeg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="p-right">
+                                        <div class="p-description">
+                                            <h3>Ez lesz egy címsor</h3>
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas nisi
+                                                eligendi
+                                                minima exercitationem velit aut quis, voluptatum quisquam in enim
+                                                magni
+                                                saepe. Consequatur, eligendi voluptate?</p>
+                                            <ul>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                            </ul>
+                                        </div>
+                                        <div class="p-btn-group">
+                                            <a href="" target="_blank" class="btn popup-btn"><i
+                                                    class="ri-github-fill"></i>Github</a>
+                                            <a href="" target="_blank" class="btn popup-btn"><i
+                                                    class="ri-computer-line"></i>Demo</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ens of portfolio -->
+
+
+        <section class="blog section-link" id="blog">
+            <div class="main-heading">
+                <h2>Blog</h2>
+                <span>Néhány gondolatom</span>
+            </div>
+            <div class="blogContent"></div>
+        </section>
+
+        <!-- contact section -->
+        <section class="contact section-link" id="contact">
+            <div class="main-heading">
+                <h2>Kapcsolat</h2>
+                <span>Tegye fel kérdését</span>
+            </div>
+            <div class="contact-container container">
+                <div class="contact-content">
+                    <div class="contact-info-list">
+
+                        <div class="contact-info-item">
+                            <a href="tel:+36301234567">
+                                <div class="contact-group">
+                                    <i class="ri-phone-fill contact-icon"></i>
+                                    <p class="contact-title">Telefon</p>
+                                    <p class="contact-subtitle">+3630 854 4452</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <a href="mailto:thomashorvathweb@gmail.com">
+                                <div class="contact-group">
+                                    <i class="ri-mail-fill contact-icon"></i>
+                                    <p class="contact-title">Email</p>
+                                    <p class="contact-subtitle">thomashorvathweb@gmail.hu</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <a href="">
+                                <div class="contact-group">
+                                    <i class="ri-map-pin-fill contact-icon"></i>
+                                    <p class="contact-title">Cím</p>
+                                    <p class="contact-subtitle">Pomáz - HU</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                    <form class="form" id="contact-form">
+                        <div class="form-container">
+                            <div class="form-content">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">név</label>
+                                    <input type="text" name="user-name" id="name" class="input-primary form-input"
+                                        autocomplete="off" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label ">email</label>
+                                    <input type="email" name="user-email" id="email" class="input-primary form-input"
+                                        autocomplete="off" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="form-label ">tárgy</label>
+                                <input type="text" name="subject" id="subject" class="input-primary form-input"
+                                    autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label ">üzenet</label>
+                                <textarea name="message" id="message" class="input-primary form-input"
+                                    autocomplete="off" required></textarea>
+                            </div>
+                            <div class="form-status-box">
+                                <p></p>
+                            </div>
+                            <button type="submit" name="submit" class="btn btn-contact"><i
+                                    class="ri-send-plane-fill"></i>Küldés</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- end of contact -->
+    </main>
+    <!-- ************************* END OF MAIN SECTION ******************************** -->
+    <!--  footer -->
+
+
+
+    <!-- ************************* FOOTER SECTION ******************************** -->
+    <footer class="footer">
+        <div class="footer-header">
+            <h3>Itt is megtalálsz:</h3>
+        </div>
+        <div class="footer-detail">
+
+            <a href="https://www.facebook.com/ThomasHorvathTheGuitarist" target="_blank"><img class="f-icon"
+                    src="./assets/social_icons_png/facebook.png" alt=""></a>
+            <a href="https://www.instagram.com/thomas.theguitarist/" target="_blank"><img class="f-icon"
+                    src="./assets/social_icons_png/instagram.png" alt=""></a>
+            <a href="https://github.com/Thomas-Horvath" target="_blank"><img class="f-icon"
+                    src="./assets/social_icons_png/github.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/thomas-horvath-8886b2273/" target="_blank"><img class="f-icon"
+                    src="./assets/social_icons_png/linkedin.png" alt=""></a>
+            <a href="https://www.youtube.com/channel/UCNKmzckgSstdXpJyaYiU6Dw" target="_blank"><img class="f-icon"
+                    src="./assets/social_icons_png/youtube.png" alt=""></a>
+        </div>
+        <div class="footerInfo">
+            <a href="#">Adatvédelmi irányelvek</a>
+            <a href="#">Impresszum</a>
+            <a href="#">Sütik kezelése</a>
+        </div>
+
+        <p class="text">Copyright &copy; 2024 || Minden jog fenntartva! Thomas Horvath</p>
+
+    </footer>
+
+    <!-- ************************* END OF FOOTER SECTION ******************************** -->
+
+
+    <a class="scrollUp" href="#" title="Ugrás a lap tetejére"><i class="fa-solid fa-arrow-up"></i></a>
+
+
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
