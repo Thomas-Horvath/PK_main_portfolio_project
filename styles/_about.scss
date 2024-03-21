@@ -1,8 +1,12 @@
+.about {
+    margin-top: -2rem;
+}
+
 .about-container {
     max-width: 1600px;
     display: grid;
     grid-template-columns: 1fr ;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .about-left {
@@ -19,24 +23,24 @@
     align-items: center;
     position: relative;
     z-index: 2;
-    border-radius: calc(.5rem + 10px);
+    border-radius: calc(.5rem + .25rem);
 }
 
 .about-left img {
-    width: 200px;
+    width: 250px;
     z-index: 1;
     background: rgb(0, 0, 0);
-    border-radius: 10px;
+    border-radius: .25rem;
 }
 
 .about-img::after {
     content: '';
     position: absolute;
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     background-color: $main-color;
     opacity: .5;
-    border-radius: 10px;
+    border-radius: .25rem;
     z-index: 0;
     top: -30px;
     left: -30px;
@@ -45,12 +49,39 @@
 .about-img::before {
     content: '';
     position: absolute;
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     background-color: $main-color;
     opacity: .5;
-    border-radius: 10px;
+    border-radius: .25rem;
     z-index: 0;
     bottom: -30px;
     right: -30px;
+}
+
+.about-right {
+    padding: 1rem;
+    strong {
+        color: $main-color;
+        font-size: 1.1rem;
+    }
+    h3 {
+        font-size:1.8rem ;
+    }
+
+    p {
+        margin: 1.2rem 0;
+        font-size: 1.1rem;
+        line-height: 1.6rem;
+        letter-spacing: 1px;
+    }
+}
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    .about-btn {
+        width: 80%;
+    }
 }

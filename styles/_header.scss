@@ -1,7 +1,7 @@
 .header {
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 10;
     height: 60px;
     padding: 0 calc(2rem - 12px) 0 2rem;
     background-color: $bg-header-dark;
@@ -21,10 +21,7 @@
 .nav-logo-img {
     height: 3rem;
 }
-.js-main-logo {
-    transition: src 3s ease;
 
-}
 .icons {
     display: flex;
     align-items: center;

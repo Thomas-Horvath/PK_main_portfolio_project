@@ -22,7 +22,7 @@
     }
 
     p {
-        font-size: 1.21rem;
+        font-size: 1.2rem;
         // color: $main-color;
     }
 
@@ -49,4 +49,11 @@
         font-size: 2rem;
         color: $main-color;
     }
+}
+.wave {
+  width: 100%;
+  margin-top: -1px;
+ overflow: hidden;
+
+  
 }

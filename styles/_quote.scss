@@ -1,13 +1,13 @@
 //*  =========================== qoute section ============================================*/
+
 .quote {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     justify-content: center;
-    padding: 3rem 3rem;
-
-    min-height: 430px;
+    padding: 2rem 5rem;
+    min-height: 150px;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('../assets/img/qoute_section-bg.jpg');
@@ -16,37 +16,42 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     z-index: 1;
-    overflow: hidden;
+
+    margin-top: 2rem;
 
 
+    p {
+        font-size: 1.1rem;
+        margin: .4rem;
+
+    }
+
+    p:first-child {
+        font-family: $font-family-protest;
+        letter-spacing: 2px;
+        line-height: 1.4rem;
+    }
+
+    p:last-child {
+        color: $main-color;
+        font-family: $font-family-poppins-bold;
+    }
 }
 
-.quote::before {
-    content: "";
+.quote-container {
+    background: #44444477;
+    width: 80%;
+    height: 150px;
+    z-index: 300;
     position: absolute;
-    /* width: 0;
-    height: 0; */
-    border-style: solid;
-    border-width: 0 0 30px 100vw;
-    /* Felülről, jobbról, alulról, balról */
-    border-color: transparent transparent transparent $bg-dark-light;
-    /* Átlátszó, a háromszög színe, átlátszó, átlátszó */
-    top: 0;
-    left: 0;
-    z-index: 100;
-
-}
-
-.quote::after {
-    content: "";
-    position: absolute;
-
-    border-style: solid;
-    border-width: 0 0 30px 100vw;
-    /* Felülről, jobbról, alulról, balról */
-    border-color: transparent transparent $bg-dark-light transparent;
-    /* Átlátszó, a háromszög színe, átlátszó, átlátszó */
-    bottom: 0px;
-    right: 0;
-    z-index: 100;
+    top: 3rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 0 0 0 1rem;
+    border: 1px solid $main-color-55;
+    border-radius: .25rem;
+    box-shadow: 4px 4px 10px $black;
 }
