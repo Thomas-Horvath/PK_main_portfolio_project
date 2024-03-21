@@ -38,7 +38,7 @@ logoImage.addEventListener('mouseleave', () => {
 
 
 
-/*  gallery swiper script  */
+/*  blog swiper script  */
 const gallery = new Swiper(".gallery_slider", {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -47,6 +47,10 @@ const gallery = new Swiper(".gallery_slider", {
     navigation: {
         nextEl: ".swiper-button-prev",
         prevEl: ".swiper-button-next",
+    },
+    autoplay: {
+        delay:3000,
+    
     },
     pagination: {
         el: ".gallery_slider-pagination",
