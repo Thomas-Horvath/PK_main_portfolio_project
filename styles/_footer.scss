@@ -10,10 +10,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: -1;
+    z-index: 0;
     justify-content: space-between;
     border-top: 2px solid $main-color-55;
-
+z-index: -1;
     img {
         width: 30px;
     }
@@ -27,5 +27,5 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); /* Háttérkép átlátszósága */
-    z-index: -1;
+    z-index: -2;
 }

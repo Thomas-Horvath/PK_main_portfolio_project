@@ -75,10 +75,10 @@ img {
   position: relative;
   color: #111111;
   padding-inline: 1rem;
-  z-index: 1;
   transition: 0.4s;
   gap: 0.8rem;
   white-space: nowrap;
+  z-index: 0;
 }
 
 .btn:hover {
@@ -141,6 +141,7 @@ section {
   position: relative;
   text-align: center;
   margin-bottom: 0.5rem;
+  z-index: -1;
 }
 .main-heading h2 {
   font-family: "Poppins-extrabold", sans-serif;
@@ -173,7 +174,7 @@ section {
 .header {
   position: fixed;
   width: 100%;
-  z-index: 10;
+  z-index: 1;
   height: 60px;
   padding: 0 calc(2rem - 12px) 0 2rem;
   background-color: #191919;
@@ -308,13 +309,13 @@ section {
 }
 
 .home {
-  background: linear-gradient(rgba(10, 10, 10, 0.7), #0a0a0a), url(../assets/img/BG-gray.jpg) center/cover;
+  background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8), rgb(10, 10, 10) 80%), url(../assets/img/BG-gray.jpg) center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 .home h1 {
   font-size: 4.4rem;
@@ -330,6 +331,7 @@ section {
 }
 .home p {
   font-size: 1.2rem;
+  margin-bottom: 0;
 }
 .home h3 {
   font-size: 1.5rem;
@@ -374,6 +376,7 @@ section {
   padding: 2rem;
   display: flex;
   justify-content: center;
+  z-index: 0;
 }
 
 .about-img {
@@ -428,7 +431,7 @@ section {
   font-size: 1.1rem;
 }
 .about-right h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 .about-right p {
   margin: 1.2rem 0;
@@ -460,7 +463,6 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  z-index: 1;
   margin-top: 2rem;
 }
 .quote p {
@@ -481,9 +483,9 @@ section {
   background: rgba(68, 68, 68, 0.4666666667);
   width: 80%;
   height: 150px;
-  z-index: 300;
+  z-index: 0;
   position: absolute;
-  top: 3rem;
+  top: 2rem;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -496,21 +498,138 @@ section {
 }
 
 .portfolio-wrapper {
-  margin-top: 2rem;
   min-height: 100vh;
-  background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.1)), url("../assets/img/portfolio-bg 1.png");
-  background-attachment: fixed;
+  background-image: url("../assets/img/portfolio-bg 1.png");
   background-size: cover;
   background-position: center;
   box-shadow: var(--box-shadow-light);
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
+  padding: 3rem 1rem 8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-wrapper::after {
+  position: absolute;
+  content: "";
+  top: -10px;
+  left: 0;
+  height: 102%;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(0deg, rgb(10, 10, 10) 5%, rgba(10, 10, 10, 0.5) 25%, rgba(10, 10, 10, 0.4) 47%, rgba(10, 10, 10, 0.5) 75%, rgb(10, 10, 10) 90%);
+}
+
+.wave-reverse {
+  margin-bottom: -10px;
+}
+
+/* portfolio cards */
+.portfolio-card {
+  width: 100%;
+  height: auto;
+  background-color: #2A2A30;
+  overflow: hidden;
+  border: 2px solid #f5b32f;
+  border-radius: 6px;
+  box-shadow: 4px 5px 8px #111111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portfolio-card-title {
+  text-align: center;
+  padding: 0.7rem;
+  background: linear-gradient(135deg, #f5b32f, rgba(245, 179, 47, 0.5490196078), #444, #333, #000);
+}
+
+.portfolio-content {
+  padding: 1rem 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-content p {
+  text-align: center;
+}
+.portfolio-content h4 {
+  margin: 1rem 0;
+}
+
+.portfolio-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #191919;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+}
+.portfolio-popup h2 {
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.portfolio-popup-content-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.portfolio-popup-content-container img {
+  width: 100%;
+  object-fit: cover;
+}
+.portfolio-popup-content-container h3, .portfolio-popup-content-container p, .portfolio-popup-content-container ul {
+  padding: 1rem 1rem 0;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #F1F5F2;
+}
+
+.portfolio-popup-btn-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.portfolio-btn {
+  position: absolute;
+  bottom: 2rem;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .blog {
   padding: 5rem 0 2rem;
   background: var(--bg-dark-light);
+  margin-bottom: 3rem;
 }
 
 .blogContent {
@@ -523,6 +642,187 @@ section {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-container {
+  position: absolute;
+  content: "";
+  top: 3rem;
+  width: 100%;
+  height: 450px;
+  max-width: 800px;
+  z-index: 0;
+  margin: auto;
+}
+
+.blog-content {
+  width: 280px;
+  height: 400px;
+  background: #191919;
+  margin: auto;
+  border: 2px solid #f5b32f;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #f5b32f;
+}
+
+.swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: #f5b32f;
+  width: 1rem;
+  height: 1rem;
+}
+
+.contact {
+  padding: 3rem 1rem;
+  position: relative;
+}
+.contact .contact-container {
+  padding-top: 2rem;
+}
+
+.contact-icon {
+  font-size: clamp(2rem, 4vw, 2.8125rem);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
+  gap: 1rem;
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.icon-container {
+  width: 4rem;
+}
+
+.contact-info-item {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.contact-info-item i {
+  color: #f5b32f;
+  font-size: 2.5rem;
+}
+
+.contact-title {
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: clamp(1.875rem, 4vw, 2.1875rem);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.contact-subtitle {
+  color: #797979;
+  font-size: clamp(0.875rem, 4vw, 1rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+/* section right side - form */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+.form-label {
+  position: absolute;
+  top: 25px;
+  left: 5px;
+  transform: translateY(-50%);
+  background-color: #1a1a1a;
+  padding-inline: 5px;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  color: #F1F5F2;
+  font-size: clamp(0.875rem, 4vw, 1rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.form-label.focus {
+  top: 0;
+  font-size: 0.7692307692rem;
+}
+
+.form-input {
+  width: 100%;
+}
+
+.input-primary {
+  outline: none;
+  border: 3px solid #f5b32f;
+  border-radius: 8px;
+  height: 50px;
+  font-family: Arial, sans-serif;
+  font-size: 1.1rem;
+  color: #ffffff;
+  padding-inline: 5px;
+  padding-left: 10px;
+  background-color: transparent;
+  transition: background 0.3s ease;
+}
+
+textarea.form-input {
+  resize: vertical;
+  padding-block: 5px;
+  min-height: 150px;
+}
+
+.form-status-box {
+  height: 1.1rem;
+  color: #797979;
+}
+
+.form-status-box p {
+  font-size: clamp(0.875rem, 4vw, 1rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.btn-contact {
+  align-self: center;
+  margin-bottom: 2rem;
 }
 
 .footer {
@@ -536,9 +836,10 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: -1;
+  z-index: 0;
   justify-content: space-between;
   border-top: 2px solid rgba(245, 179, 47, 0.5490196078);
+  z-index: -1;
 }
 .footer img {
   width: 30px;
@@ -552,7 +853,7 @@ section {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7); /* Háttérkép átlátszósága */
-  z-index: -1;
+  z-index: -2;
 }
 
 .scrollUp {

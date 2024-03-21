@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
 
     h1 {
         font-size: 4.4rem;
@@ -24,6 +24,7 @@
     p {
         font-size: 1.2rem;
         // color: $main-color;
+        margin-bottom: 0;
     }
 
     h3 {
@@ -31,7 +32,7 @@
         margin-bottom: 3rem;
         font-family: $font-family-protest;
         letter-spacing: .2rem;
-       // color: #E84855;
+        // color: #E84855;
         color: #DB5A42;
     }
 }
@@ -50,10 +51,11 @@
         color: $main-color;
     }
 }
-.wave {
-  width: 100%;
-  margin-top: -1px;
- overflow: hidden;
 
-  
+.wave {
+    width: 100%;
+    margin-top: -1px;
+    overflow: hidden;
+
+
 }

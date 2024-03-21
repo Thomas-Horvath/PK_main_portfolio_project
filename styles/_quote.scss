@@ -15,7 +15,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    z-index: 1;
+
 
     margin-top: 2rem;
 
@@ -42,9 +42,9 @@
     background: #44444477;
     width: 80%;
     height: 150px;
-    z-index: 300;
+    z-index: 0;
     position: absolute;
-    top: 3rem;
+    top: 2rem;
     margin: auto;
     display: flex;
     flex-direction: column;

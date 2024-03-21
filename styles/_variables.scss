@@ -85,4 +85,5 @@
  $blog-linear: linear-gradient(135deg, $main-color-30, $main-color-30);
  $footer-linear: linear-gradient(135deg,$main-color-55 25%, $main-color-30 ,  #11111166 );
  $portfolio-linear: linear-gradient(135deg,  $main-color,$main-color-55,#444,#333, #000);
- $bg-linear-gradient: linear-gradient(rgba(10, 10, 10, 0.7), #0a0a0a), url(../assets/img/BG-gray.jpg) center/cover;
+ $bg-linear-gradient: linear-gradient(rgba(10, 10, 10, 0.8),rgba(10, 10, 10, .8), rgb(10, 10, 10)80%), url(../assets/img/BG-gray.jpg) center/cover;
+

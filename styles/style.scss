@@ -47,10 +47,10 @@ img {
     position: relative;
     color: $btn-color-dark;
     padding-inline: 1rem;
-    z-index: 1;
     transition: .4s;
     gap: .8rem;
     white-space: nowrap;
+    z-index: 0;
 }
 
 .btn:hover {
@@ -123,5 +123,6 @@ section {
 @import 'quote';
 @import 'portfolio';
 @import 'blog';
+@import 'contact';
 @import 'footer';
 @import 'scrollUpIcon';
