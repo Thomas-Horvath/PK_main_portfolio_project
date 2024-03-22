@@ -1,13 +1,16 @@
 .blog {
     padding: 5rem 0 2rem;
     background: var(--bg-dark-light);
-   margin-bottom: 3rem;
+   
+}
+.blog-wrapper {
+    height: 80vh;
 }
 
 .blogContent {
     margin-top: 2rem;
     padding-top: 4rem;
-    min-height: 40vh;
+    min-height: 60vh;
     width: 100%;
     background-image: $blog-linear, url('../assets/img/blog-bg.jpg');
     background-size: cover;
@@ -22,19 +25,20 @@
 
 .carousel-container {
   position: absolute;
-  content: '';
-  top: 3rem;
+  content: ''; 
+  bottom: -6rem;
   width: 100%;
   height: 450px;
   max-width: 800px;
   z-index: 0;
  margin: auto;
+ padding: 0 1rem;
  
  
 }
 
 .blog-content {
-    width: 280px;
+    width: 250px;
     height: 400px;
     background: $bg-dark;
     margin: auto;
@@ -42,11 +46,12 @@
 }
 .swiper-button-prev,
 .swiper-button-next {
-    color: $main-color;
+    color: $btn-color-dark;
+    text-shadow: 3px 0px 1px $main-color;
 }
 .swiper-button-prev::after,
 .swiper-button-next::after {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 600;
     
 }

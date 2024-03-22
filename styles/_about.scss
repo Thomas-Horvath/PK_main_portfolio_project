@@ -1,9 +1,9 @@
 .about {
-    margin-top: -2rem;
+    margin-top: 2rem;
 }
 
 .about-container {
-    max-width: 1600px;
+    // max-width: 1600px;
     display: grid;
     grid-template-columns: 1fr ;
     margin-top: 2rem;
@@ -61,17 +61,22 @@
 }
 
 .about-right {
-    padding: 1rem;
+    // padding: 1rem;
+    .about-section {
+        padding: 1rem;
+        margin-bottom: 5rem;
+    }
     strong {
         color: $main-color;
         font-size: 1.1rem;
     }
     h3 {
         font-size:2rem ;
+       
     }
 
     p {
-        margin: 1.2rem 0;
+        margin: 1.5rem 0;
         font-size: 1.1rem;
         line-height: 1.6rem;
         letter-spacing: 1px;
@@ -82,7 +87,8 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    .about-btn {
+    margin: 6rem 0 3rem;
+    .about-btn, .btn-secund {
         width: 80%;
     }
 }

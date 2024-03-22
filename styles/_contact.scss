@@ -87,7 +87,6 @@
 }
 
 .form-label {
-
     position: absolute;
     top: calc(50px / 2);
     left: 5px;
@@ -115,7 +114,7 @@
 .input-primary {
     outline: none;
     border: 3px solid $main-color;
-    border-radius: 8px;
+    border-radius: .25rem;
     height: 50px;
     font-family: Arial, sans-serif;
     font-size: calc(1rem *1.1);

@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     padding: 2rem 5rem;
-    min-height: 150px;
+    min-height: 350px;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('../assets/img/qoute_section-bg.jpg');
@@ -39,12 +39,12 @@
 }
 
 .quote-container {
-    background: #44444477;
+    background: $bg-card;
     width: 80%;
-    height: 150px;
+    height: 200px;
     z-index: 0;
     position: absolute;
-    top: 2rem;
+   bottom: -3rem;
     margin: auto;
     display: flex;
     flex-direction: column;
