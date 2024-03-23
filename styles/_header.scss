@@ -17,7 +17,11 @@
     min-width: 220px;
     margin: auto;
 }
-
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
 .nav-logo-img {
     height: 3rem;
 }
@@ -25,7 +29,7 @@
 .icons {
     display: flex;
     align-items: center;
-   
+
     cursor: pointer;
     height: 100%;
 
@@ -123,12 +127,12 @@
 
 .nav-link:hover {
     color: $main-color;
-    background-size: 100% 1px;
+   
 }
 
 .nav-link.active {
     color: $main-color;
-    background-size: 100% 1px;
+   
 }
 
 

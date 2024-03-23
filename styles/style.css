@@ -220,6 +220,12 @@ section {
   margin: auto;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .nav-logo-img {
   height: 3rem;
 }
@@ -309,12 +315,10 @@ section {
 
 .nav-link:hover {
   color: #f5b32f;
-  background-size: 100% 1px;
 }
 
 .nav-link.active {
   color: #f5b32f;
-  background-size: 100% 1px;
 }
 
 .nav-links li {
@@ -644,14 +648,22 @@ section {
   background-size: cover;
   background-position: center;
   box-shadow: var(--box-shadow-light);
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  padding: 3rem 1rem 8rem;
-  position: relative;
-  overflow: hidden;
+}
+
+.card-wrapper {
+  padding: 5rem 1rem 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio-wrapper::after {
@@ -676,7 +688,7 @@ section {
 /* portfolio cards */
 .portfolio-card {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
   background-color: #2A2A30;
   overflow: hidden;
@@ -695,11 +707,12 @@ section {
 }
 
 .portfolio-content {
-  padding: 1rem 0.2rem;
+  padding: 1rem 0.6rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
 .portfolio-content p {
   text-align: center;
@@ -1032,4 +1045,115 @@ textarea.form-input {
   font-size: 1.5rem;
   opacity: 0;
   transition: 0.3s ease;
+}
+
+@media (min-width: 992px) {
+  .hamburger-btn-open {
+    display: none;
+  }
+  .nav {
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    transform: translateY(0);
+    border: none;
+    padding: 0 2rem;
+    transition: all 0s;
+  }
+  .nav .hamburger-btn-close,
+  .nav .nav-logo-img {
+    display: none;
+  }
+  .nav .nav-links {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  .nav .nav-links .nav-link {
+    font-size: 1.5rem;
+    padding: 0;
+    padding-bottom: 0;
+    background-image: linear-gradient(#f5b32f, #f5b32f);
+    background-size: 0 2px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: color 0.3s ease, background-size 0.3s ease;
+  }
+  .nav .nav-links .nav-link:hover {
+    color: #f5b32f;
+    background-size: 100% 2px;
+  }
+  .nav .nav-links .nav-link.active {
+    color: #f5b32f;
+    background-size: 100% 2px;
+  }
+  .nav .nav-links li {
+    border: none;
+  }
+  .nav .nav-links li:first-child {
+    margin-top: 0;
+  }
+  .skill-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2.1fr);
+    padding: 1rem;
+    gap: 3rem;
+    max-width: 1600px;
+    margin: auto;
+    grid-template-areas: "card1 card1 card2" "card3 card4 card4";
+  }
+  .skill-container .skills-card {
+    width: 100%;
+    height: 450px;
+    justify-content: space-between;
+  }
+  .skill-container .skills-card .skills-icon-container {
+    height: 100%;
+  }
+  .skill-container .skills-card .skills-icon-container .skill-container {
+    width: 9rem;
+    height: 10rem;
+  }
+  .skill-container .skills-card .skills-icon-container .skill-container img {
+    width: 6rem;
+  }
+  .skill-container .skills-card .skills-icon-container .skill-container p {
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+  .card-1 {
+    grid-area: card1;
+    width: 100%;
+  }
+  .card-2 {
+    grid-area: card2;
+  }
+  .card-3 {
+    grid-area: card3;
+  }
+  .card-4 {
+    grid-area: card4;
+  }
+  .card-wrapper {
+    max-width: 1600px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4em 2rem;
+    padding: 2rem 1rem 2rem;
+  }
+  .portfolio-content {
+    padding: 2rem 0.6rem 3rem;
+    gap: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .nav .nav-links {
+    gap: 3rem;
+  }
+  .icon-container {
+    margin-left: 2rem;
+  }
 }
