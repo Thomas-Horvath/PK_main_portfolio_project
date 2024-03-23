@@ -77,6 +77,7 @@ img {
   gap: 0.8rem;
   white-space: nowrap;
   z-index: 0;
+  box-shadow: 4px 4px 8px #000;
 }
 
 .btn {
@@ -94,10 +95,12 @@ img {
 .btn:hover {
   color: #f5b32f;
   border: 2px solid #f5b32f;
+  box-shadow: none;
 }
 
 .btn-secund:hover {
   border: 2px solid #f5b32f;
+  box-shadow: none;
 }
 
 .btn-secund::after, .btn::after {
@@ -124,12 +127,12 @@ img {
 
 .btn:hover::after {
   transform: scale(1);
-  box-shadow: 0 0 11px 4px rgba(245, 179, 47, 0.2);
+  box-shadow: 0 0 11px 4px rgba(245, 179, 47, 0.5490196078);
 }
 
 .btn-secund:hover::after {
   transform: scale(1);
-  box-shadow: 0 0 11px 4px rgba(245, 179, 47, 0.2);
+  box-shadow: 0 0 11px 4px rgba(245, 179, 47, 0.5490196078);
 }
 
 .btn-contact {
@@ -360,7 +363,7 @@ section {
   margin-bottom: 3rem;
   font-family: "ProtestRiot", sans-serif;
   letter-spacing: 0.2rem;
-  color: #DB5A42;
+  color: #db5a42;
 }
 
 .home-social-media {
@@ -444,6 +447,9 @@ section {
   right: -30px;
 }
 
+.about-right {
+  overflow: hidden;
+}
 .about-right .about-section {
   padding: 1rem;
   margin-bottom: 5rem;
@@ -499,9 +505,9 @@ section {
   justify-content: space-between;
   border-radius: 20px;
   align-items: center;
+  cursor: pointer;
 }
 .more-info-container .info-title i {
-  cursor: pointer;
   font-size: 2.6rem;
   color: #f5b32f;
 }
@@ -522,6 +528,8 @@ section {
 
 .wave-yellow-reverse {
   margin-top: -3px;
+  width: 103%;
+  overflow: hidden;
 }
 
 .quote {
@@ -668,6 +676,7 @@ section {
 /* portfolio cards */
 .portfolio-card {
   width: 100%;
+  max-width: 400px;
   height: auto;
   background-color: #2A2A30;
   overflow: hidden;
@@ -820,7 +829,7 @@ section {
 }
 
 .swiper-pagination-bullet {
-  background: #ccc;
+  background: #f4f1f1;
   width: 1rem;
   height: 1rem;
 }
@@ -1023,12 +1032,4 @@ textarea.form-input {
   font-size: 1.5rem;
   opacity: 0;
   transition: 0.3s ease;
-}
-
-.light body {
-  background-color: #ccc;
-  color: #111111;
-}
-.light body .home {
-  background: linear-gradient(rgba(255, 255, 255, 0.8), #fff), url(../assets/img/BG-gray.jpg) center/cover;
 }

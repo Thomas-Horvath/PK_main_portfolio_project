@@ -49,6 +49,7 @@ img {
     gap: .8rem;
     white-space: nowrap;
     z-index: 0;
+    box-shadow: 4px 4px 8px $black;
 }
 
 .btn {
@@ -68,10 +69,12 @@ img {
 .btn:hover {
     color: $main-color;
     border: 2px solid $main-color;
+    box-shadow: none;
 
 }
 .btn-secund:hover {
     border: 2px solid $main-color;
+    box-shadow: none;
 }
 
 %btn-after-attributes {
@@ -99,11 +102,11 @@ img {
 
 .btn:hover::after {
     transform: scale(1);  
-    box-shadow: 0 0 11px 4px $main-color-30;
+    box-shadow: 0 0 11px 4px $main-color-55;
 }
 .btn-secund:hover::after {
     transform: scale(1);  
-    box-shadow: 0 0 11px 4px $main-color-30;
+    box-shadow: 0 0 11px 4px $main-color-55;
 }
 
 
@@ -159,4 +162,3 @@ section {
 @import 'footer';
 @import 'scrollUpIcon';
 
-@import 'darkMode';

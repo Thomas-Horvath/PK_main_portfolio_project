@@ -80,47 +80,117 @@ formInputs.forEach(input => {
 
 
 //  info tartalom megjelenítése
+const infoBoxes = document.querySelectorAll('.info-title');
 
-const icons = document.querySelectorAll('.title-icon');
-
-icons.forEach((icon) => {
-    icon.addEventListener('click', function () {
-        // Az ikon szülőelemének (info-title) kiválasztása
-        const parent = this.closest('.info-title');
-        // Az adott csoportba tartozó content kiválasztása
-        const content = parent.nextElementSibling;
-
-        // A többi content elrejtése és az összes ikon átállítása arrow-down-ra
-        const allContents = document.querySelectorAll('.info-content');
-        const allIcons = document.querySelectorAll('.title-icon');
-        allContents.forEach((item, index) => {
-            if (item !== content) {
-                item.classList.remove('displayBlock');
-                allIcons[index].classList.remove('fa-circle-arrow-up');
-                allIcons[index].classList.add('fa-circle-arrow-down');
-            }
-        });
-
-        // Az aktuális content megjelenítése vagy elrejtése toggle segítségével
-        content.classList.toggle('displayBlock');
-
-        // Az ikon állapotának kezelése (arrow-up vagy arrow-down)
-        if (content.classList.contains('displayBlock')) {
-            icon.classList.remove('fa-circle-arrow-down');
-            icon.classList.add('fa-circle-arrow-up');
-        } else {
-            icon.classList.remove('fa-circle-arrow-up');
-            icon.classList.add('fa-circle-arrow-down');
-        }
+infoBoxes.forEach((box) => {
+    const icon = box.querySelector('.title-icon'); // Az adott boxhoz tartozó ikon
+    const content = box.nextElementSibling; // Az adott boxhoz tartozó content
+    
+    box.addEventListener('click', function () {
+        const isDisplayBlock = content.classList.contains('displayBlock');
+        
+        // Az összes content elrejtése
+        document.querySelectorAll('.info-content').forEach(item => item.classList.remove('displayBlock'));
+        // Az összes ikon átállítása arrow-down-ra
+        document.querySelectorAll('.title-icon').forEach(item => item.classList.replace('fa-circle-arrow-up', 'fa-circle-arrow-down'));
+        
+        // Az aktuális content megjelenítése és az ikon beállítása
+        content.classList.toggle('displayBlock', !isDisplayBlock);
+        icon.classList.toggle('fa-circle-arrow-up', !isDisplayBlock);
+        icon.classList.toggle('fa-circle-arrow-down', isDisplayBlock);
     });
 });
 
 
 
-// dark thema
-const themaBtn = document.querySelector('.js-dark-thema-btn');
-const html = document.documentElement; 
 
-themaBtn.addEventListener('click', function () {
-   html.classList.toggle('light');
+
+
+// dark theme
+// const themeBtn = document.querySelector('.js-dark-theme-btn');
+// const html = document.documentElement;
+// const wave = document.querySelector('.js-wave')
+
+// if (localStorage.getItem('theme') === 'light') {
+//     html.classList.add('light');
+//     wave.src = './assets/img/wave-white.svg';
+
+// }
+
+// themeBtn.addEventListener('click', function () {
+//     html.classList.toggle('light');
+
+//     if (html.classList.contains('light')) {
+//         wave.src = './assets/img/wave-white.svg';
+//         localStorage.setItem('theme', 'light');
+//     } else {
+//         wave.src = './assets/img/wave.svg';
+//         localStorage.setItem('theme', 'dark');
+//     }
+// });
+
+
+
+// // dark light téma megörzése újratöltés esetén is
+// document.addEventListener('DOMContentLoaded', function () {
+//     const html = document.documentElement;
+//     const theme = localStorage.getItem('theme');
+
+//     // Ha nincs tárolt téma, vagy ha az üres, akkor az alapértelmezett téma beállítása
+//     if (!theme || (theme !== 'light' && theme !== 'dark')) {
+
+//         localStorage.setItem('theme', 'dark'); // Tároljuk az alapértelmezett témát
+//         return; // Kilépünk a függvényből, mivel nem kell tovább futtatni
+//     }
+
+//     // Ellenkező esetben beállítjuk a tárolt téma alapján
+//     html.classList.add(theme);
+// });
+
+
+
+
+
+const modalViews = document.querySelectorAll(".portfolio-popup"),
+    modalBtns = document.querySelectorAll(".btn-portfolio"),
+    modalCloses = document.querySelectorAll(".close-btn");
+
+
+
+/*  modal függvény létrehozása */
+let modal = function (modalClick) {
+    // a mmodalClickben kapott  indexű elemhez jozzáadja az active-modal osztályt ami ccs-ben a megjelenésért felelős
+    modalViews[modalClick].classList.add("active");
+
+    modalViews[modalClick].addEventListener("click", function (e) {
+        // Ellenőrizzük, hogy a kattintás a modal tartalmán belül vagy kívül történt
+        if (e.target === this) {
+            closeModal(modalClick);
+        }
+    });
+};
+/* a closeModal függvény létrehozása */
+let closeModal = function (modalClick) {
+    modalViews[modalClick].classList.remove("active");
+}
+
+
+
+
+// végig megy a gombokon és futtat egy egy függvényt
+modalBtns.forEach((modalBtn, i) => {
+    modalBtn.addEventListener('click', () => {
+        modal(i);
+    })
+})
+
+
+
+
+modalCloses.forEach((modalClose, i) => {
+    modalClose.addEventListener("click", () => {
+        closeModal(i);
+    });
 });
+
+

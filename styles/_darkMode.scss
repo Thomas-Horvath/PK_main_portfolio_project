@@ -1,10 +1,42 @@
 .light {
-    body {
-        background-color: $bg-light;
-        color:  $btn-color-dark;
-      .home {
-        background: $bg-linear-gradient-light;
+  body {
+    background-color: $bg-light;
+    color: $text-grey;
+    font-family: $font-family-poppins-medium;
+
+    .home {
+      background: $bg-linear-gradient-light;
+    }
+
+    .header {
+      background: $bg-light;
+      border-color: $main-color;
+    }
+
+    nav {
+      background: $bg-light;
+
+      .nav-links {
+        li {
+
+          border-color: $black;
+        }
+      }
+
+      .nav-link {
+        color: $text-grey;
+      }
+
+      .nav-link:hover {
+        color: $main-color;
+        background: $gray-100;
       }
     }
-   
+  }
+  .form-label {
+    background: $bg-light;
+    color: $text-grey;
+    font-family: $font-family-poppins-bold;
+  }
+
 }
