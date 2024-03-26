@@ -3,10 +3,11 @@
 }
 
 .about-container {
-    // max-width: 1600px;
+    //max-width: 1600px;
     display: grid;
     grid-template-columns: 1fr ;
     margin-top: 2rem;
+    overflow: hidden;
 }
 
 .about-left {
@@ -17,18 +18,20 @@
 }
 
 .about-img {
-    padding: .5rem;
+    width: 265px;
+    height: 265px;
     background: #444;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     z-index: 2;
-    border-radius: calc(.5rem + .25rem);
+    border-radius: .25rem;
 }
 
 .about-left img {
     width: 250px;
+    height: 250px;
     z-index: 1;
     background: rgb(0, 0, 0);
     border-radius: .25rem;

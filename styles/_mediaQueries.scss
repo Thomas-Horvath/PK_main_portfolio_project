@@ -1,9 +1,45 @@
 @media (min-width: 576px) {}
 
 @media (min-width: 768px) {
+    section {
+        padding-top: 4rem;
+    }
+
+    .main-heading {
+        h2 {
+            font-size: 4.5rem;
+        }
+
+        span {
+            font-size: 2.5rem;
+        }
+    }
+
     .scrollUp {
         visibility: visible;
         opacity: 1;
+    }
+
+    // about
+    .btn-group {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+
+        .about-btn,
+        .btn-secund {
+            width: fit-content;
+        }
+    }
+
+    .quote {
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    .quote-container {
+        padding: 2rem;
     }
 }
 
@@ -79,24 +115,65 @@
         h3 {
             font-size: 2rem;
         }
+
         p {
             font-size: 1.5rem;
         }
 
     }
+
     .home-social-media {
 
         display: flex;
-        
+
     }
 
+
+
+    // about section
+    .about-right {
+        .about-section {
+            padding: 5rem;
+        }
+    }
+
+    .about-left {
+        align-items: start;
+    }
+
+    .about-img {
+        width: 360px;
+        height: 360px;
+    }
+
+    .about-left img {
+        width: 340px;
+        height: 340px;
+    }
+
+    .more-info-container {
+        padding: 4rem 3.5rem;
+    }
+
+    // quote section
+    .quote {
+        p:first-child {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .quote-container {
+        height: 300px;
+        width: 70%;
+        padding: 4rem;
+    }
 
     // skill section
     .skill-container {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2.1fr);
-        padding: 1rem;
-        gap: 3rem;
+        padding: 1rem 3rem;
+        gap: 2rem;
         max-width: 1400px;
         margin: auto;
         grid-template-areas:
@@ -153,14 +230,21 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: 4em 2rem;
-        padding: 2rem 1rem 2rem;
+
     }
 
     .portfolio-content {
         padding: 2rem .6rem 3rem;
         gap: 2rem;
     }
- 
+
+    .portfolio-popup-content-container {
+        flex-direction: row;
+
+    }
+
+
+
 
 }
 
@@ -182,6 +266,92 @@
         margin-left: 2rem;
     }
 
+    .about-container {
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+        grid-template-areas:
+            'aboutLeft aboutRight'
+            'btnGroup aboutRight'
+            'waveYellowReverse waveYellowReverse'
+            'moreInfo moreInfo'
+            'waveYellow waveYellow';
+    }
+
+    .about-left {
+        width: 700px;
+        grid-area: aboutLeft;
+        align-items: center;
+        justify-self: end;
+
+    }
+
+    .about-right {
+
+        max-width: 700px;
+        grid-area: aboutRight;
+        margin-bottom: 0;
+
+        .about-section {
+            padding: 2rem 3rem 2rem 2rem;
+            margin-bottom: 0;
+
+            h3 {
+                font-size: 2.2rem;
+            }
+
+            p {
+                font-size: .9rem;
+            }
+
+            strong {
+                font-size: 1rem;
+            }
+
+        }
+    }
+
+    .about-img {
+        width: 420px;
+        height: 420px;
+    }
+
+    .about-img::after,
+    .about-img::before {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-left img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .more-info-container {
+        grid-area: moreInfo;
+    }
+
+    .btn-group {
+        grid-area: btnGroup;
+        width: 700px;
+        align-items: start;
+        justify-self: end;
+    }
+
+    .wave-yellow {
+        grid-area: waveYellow;
+        margin-bottom: 4rem;
+
+    }
+
+    .wave-yellow-reverse {
+        grid-area: waveYellowReverse;
+    }
+
+    .quote-container {
+        width: 60%;
+        padding: 4rem;
+        max-width: 1400px;
+    }
 }
 
 

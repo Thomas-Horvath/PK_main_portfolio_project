@@ -83,7 +83,7 @@ img {
 .btn {
   background-color: #f5b32f;
   color: #111111;
-  border: 1px solid #f5b32f;
+  border: 2px solid #f5b32f;
 }
 
 .btn-secund {
@@ -285,6 +285,8 @@ section {
 
 .hamburger-btn-close {
   position: absolute;
+  width: 2rem;
+  height: 2rem;
   top: 1.5rem;
   right: 2rem;
   font-size: 1.5rem;
@@ -458,6 +460,7 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   margin-top: 2rem;
+  overflow: hidden;
 }
 
 .about-left {
@@ -468,18 +471,20 @@ section {
 }
 
 .about-img {
-  padding: 0.5rem;
+  width: 265px;
+  height: 265px;
   background: #444;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 2;
-  border-radius: 0.75rem;
+  border-radius: 0.25rem;
 }
 
 .about-left img {
   width: 250px;
+  height: 250px;
   z-index: 1;
   background: rgb(0, 0, 0);
   border-radius: 0.25rem;
@@ -546,7 +551,7 @@ section {
 .more-info-container {
   background-color: #f5b32f;
   width: 100%;
-  padding: 7rem 0;
+  padding: 3rem 0;
 }
 .more-info-container .info-group-wrapper {
   margin: auto;
@@ -579,18 +584,25 @@ section {
   font-size: 1.2rem;
 }
 .more-info-container .info-content {
-  padding: 0.5rem 1rem;
-  background: #191919;
+  padding: 1.5rem;
+  background: #2A2A30;
   border: 2px solid #111111;
   margin-top: 0.5rem;
   border-radius: 20px;
   display: none;
+}
+.more-info-container .info-content p {
+  width: 80%;
 }
 .more-info-container .displayBlock {
   display: block;
 }
 
 .wave-yellow-reverse {
+  margin-bottom: -3px;
+}
+
+.wave-yellow {
   margin-top: -3px;
   width: 103%;
   overflow: hidden;
@@ -719,7 +731,7 @@ section {
 
 .card-wrapper {
   background: transparent;
-  padding: 5rem 1rem 8rem;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -785,6 +797,7 @@ section {
   justify-content: center;
   visibility: hidden;
   opacity: 0;
+  padding: 1rem;
 }
 .portfolio-popup h2 {
   margin-top: 3.5rem;
@@ -797,15 +810,19 @@ section {
   height: 100%;
   display: flex;
   flex-direction: column;
+  border: 2px solid #f5b32f;
   border-radius: 6px;
   overflow: hidden;
   position: relative;
 }
 .portfolio-popup-content-container img {
-  width: 100%;
+  width: 300px;
+  height: 200px;
   object-fit: cover;
 }
-.portfolio-popup-content-container h3, .portfolio-popup-content-container p, .portfolio-popup-content-container ul {
+.portfolio-popup-content-container h3,
+.portfolio-popup-content-container p,
+.portfolio-popup-content-container ul {
   padding: 1rem 1rem 0;
 }
 
@@ -825,9 +842,12 @@ section {
   padding: 1rem;
 }
 
+.popup-btn {
+  font-size: 0.9rem;
+}
+
 .portfolio-btn {
-  position: absolute;
-  bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .active {
@@ -836,7 +856,7 @@ section {
 }
 
 .blog {
-  padding: 5rem 0 2rem;
+  padding: 4rem 0 2rem;
   background: var(--bg-dark-light);
 }
 
@@ -874,7 +894,7 @@ section {
 .blog-content {
   width: 250px;
   height: 400px;
-  background: #191919;
+  background: #2A2A30;
   margin: auto;
   border: 2px solid #f5b32f;
 }
@@ -1095,7 +1115,10 @@ textarea.form-input {
   font-size: 1.5rem;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.3s ease;
+}
+
+.scrollUp i {
+  transition: transform 0.3s ease;
 }
 
 .scrollUp:hover i {
@@ -1103,9 +1126,33 @@ textarea.form-input {
 }
 
 @media (min-width: 768px) {
+  section {
+    padding-top: 4rem;
+  }
+  .main-heading h2 {
+    font-size: 4.5rem;
+  }
+  .main-heading span {
+    font-size: 2.5rem;
+  }
   .scrollUp {
     visibility: visible;
     opacity: 1;
+  }
+  .btn-group {
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .btn-group .about-btn,
+  .btn-group .btn-secund {
+    width: fit-content;
+  }
+  .quote p {
+    font-size: 1.5rem;
+  }
+  .quote-container {
+    padding: 2rem;
   }
 }
 @media (min-width: 992px) {
@@ -1170,11 +1217,36 @@ textarea.form-input {
   .home-social-media {
     display: flex;
   }
+  .about-right .about-section {
+    padding: 5rem;
+  }
+  .about-left {
+    align-items: start;
+  }
+  .about-img {
+    width: 360px;
+    height: 360px;
+  }
+  .about-left img {
+    width: 340px;
+    height: 340px;
+  }
+  .more-info-container {
+    padding: 4rem 3.5rem;
+  }
+  .quote p:first-child {
+    margin-bottom: 2rem;
+  }
+  .quote-container {
+    height: 300px;
+    width: 70%;
+    padding: 4rem;
+  }
   .skill-container {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2.1fr);
-    padding: 1rem;
-    gap: 3rem;
+    padding: 1rem 3rem;
+    gap: 2rem;
     max-width: 1400px;
     margin: auto;
     grid-template-areas: "card1 card1 card2" "card3 card4 card4";
@@ -1216,11 +1288,13 @@ textarea.form-input {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 4em 2rem;
-    padding: 2rem 1rem 2rem;
   }
   .portfolio-content {
     padding: 2rem 0.6rem 3rem;
     gap: 2rem;
+  }
+  .portfolio-popup-content-container {
+    flex-direction: row;
   }
 }
 @media (min-width: 1200px) {
@@ -1229,5 +1303,68 @@ textarea.form-input {
   }
   .icon-container {
     margin-left: 2rem;
+  }
+  .about-container {
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    grid-template-areas: "aboutLeft aboutRight" "btnGroup aboutRight" "waveYellowReverse waveYellowReverse" "moreInfo moreInfo" "waveYellow waveYellow";
+  }
+  .about-left {
+    width: 700px;
+    grid-area: aboutLeft;
+    align-items: center;
+    justify-self: end;
+  }
+  .about-right {
+    max-width: 700px;
+    grid-area: aboutRight;
+    margin-bottom: 0;
+  }
+  .about-right .about-section {
+    padding: 2rem 3rem 2rem 2rem;
+    margin-bottom: 0;
+  }
+  .about-right .about-section h3 {
+    font-size: 2.2rem;
+  }
+  .about-right .about-section p {
+    font-size: 0.9rem;
+  }
+  .about-right .about-section strong {
+    font-size: 1rem;
+  }
+  .about-img {
+    width: 420px;
+    height: 420px;
+  }
+  .about-img::after,
+  .about-img::before {
+    width: 150px;
+    height: 150px;
+  }
+  .about-left img {
+    width: 400px;
+    height: 400px;
+  }
+  .more-info-container {
+    grid-area: moreInfo;
+  }
+  .btn-group {
+    grid-area: btnGroup;
+    width: 700px;
+    align-items: start;
+    justify-self: end;
+  }
+  .wave-yellow {
+    grid-area: waveYellow;
+    margin-bottom: 4rem;
+  }
+  .wave-yellow-reverse {
+    grid-area: waveYellowReverse;
+  }
+  .quote-container {
+    width: 60%;
+    padding: 4rem;
+    max-width: 1400px;
   }
 }
