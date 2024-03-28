@@ -25,6 +25,7 @@
     .info-title {
         padding: 1rem 2rem;
         background: $btn-color-dark;
+
         display: flex;
         justify-content: space-between;
         border-radius: 20px;
@@ -43,15 +44,25 @@
     }
 
     .info-content {
-        padding:  1.5rem;
+        padding: 1.5rem;
         background: $bg-light-darker;
         border: 2px solid $btn-color-dark;
         margin-top: .5rem;
         border-radius: 20px;
         display: none;
-p {
-    width: 80%;
-}
+
+        p {
+            //width: 80%;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.6rem;
+
+            a {
+                color: $main-color;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
     }
 
     .displayBlock {
@@ -60,9 +71,11 @@ p {
 
 
 }
+
 .wave-yellow-reverse {
     margin-bottom: -3px;
 }
+
 .wave-yellow {
     margin-top: -3px;
     width: 103%;

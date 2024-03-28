@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Poppins-regular";
   src: url(../fonts/Poppins-Regular.ttf);
@@ -377,7 +376,7 @@ section {
   position: relative;
   animation: animationRight 0.5s ease;
 }
-.home .home-btn {
+.home-btn {
   position: relative;
   animation: animationBottom 0.5s ease;
 }
@@ -592,7 +591,14 @@ section {
   display: none;
 }
 .more-info-container .info-content p {
-  width: 80%;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+.more-info-container .info-content p a {
+  color: #f5b32f;
+  text-decoration: underline;
+  cursor: pointer;
 }
 .more-info-container .displayBlock {
   display: block;
@@ -699,7 +705,7 @@ section {
   width: 6rem;
 }
 .skill-container .skills-card .skills-icon-container img {
-  width: 4rem;
+  width: 3.5rem;
   transition: transform 0.4s ease;
 }
 .skill-container .skills-card .skills-icon-container img:hover {
@@ -1093,7 +1099,7 @@ textarea.form-input {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Háttérkép átlátszósága */
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: -2;
 }
 
