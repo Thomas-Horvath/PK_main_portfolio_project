@@ -20,7 +20,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -51,13 +51,15 @@
     box-shadow: 4px 5px 8px $btn-color-dark;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
+
 }
 
 .portfolio-card-title {
     text-align: center;
     padding: .7rem;
     background: $portfolio-linear;
+    letter-spacing: .08rem;
 }
 
 .portfolio-content {
@@ -104,6 +106,7 @@
         margin-top: 3.5rem;
         margin-bottom: 1rem;
         font-size: 1.3rem;
+        letter-spacing: .1rem;
     }
 
 }
@@ -119,8 +122,9 @@
     position: relative;
 
     img {
-        width: 300px;
-        height: 200px;
+        width: 400px;
+        height:300px;
+        margin: auto;
         object-fit: cover;
     }
 
@@ -128,6 +132,10 @@
     p,
     ul {
         padding: 1rem 1rem 0;
+    }
+    .content-container {
+        display: flex;
+        flex-direction: column;
     }
 
 }
@@ -144,7 +152,8 @@
 .portfolio-popup-btn-group {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 2rem;
     padding: 1rem;
 }
 
@@ -161,7 +170,15 @@
 
 
 
-.active {
+.activePopUp {
     visibility: visible;
     opacity: 1;
+}
+.pagination {
+    display: flex;
+    gap: 1rem;
+}
+.activeBtn {
+    background-color: $bg-light-darker;
+    color: $main-color;
 }

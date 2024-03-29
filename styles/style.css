@@ -698,10 +698,10 @@ section {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  width: 6rem;
+  width: 5rem;
 }
 .skill-container .skills-card .skills-icon-container img {
-  width: 3.5rem;
+  width: 3rem;
   transition: transform 0.4s ease;
 }
 .skill-container .skills-card .skills-icon-container img:hover {
@@ -737,7 +737,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -761,13 +761,14 @@ section {
   box-shadow: 4px 5px 8px #111111;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
 }
 
 .portfolio-card-title {
   text-align: center;
   padding: 0.7rem;
   background: linear-gradient(135deg, #f5b32f, rgba(245, 179, 47, 0.5490196078), #444, #333, #000);
+  letter-spacing: 0.08rem;
 }
 
 .portfolio-content {
@@ -805,6 +806,7 @@ section {
   margin-top: 3.5rem;
   margin-bottom: 1rem;
   font-size: 1.3rem;
+  letter-spacing: 0.1rem;
 }
 
 .portfolio-popup-content-container {
@@ -818,14 +820,19 @@ section {
   position: relative;
 }
 .portfolio-popup-content-container img {
-  width: 300px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
+  margin: auto;
   object-fit: cover;
 }
 .portfolio-popup-content-container h3,
 .portfolio-popup-content-container p,
 .portfolio-popup-content-container ul {
   padding: 1rem 1rem 0;
+}
+.portfolio-popup-content-container .content-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .close-btn {
@@ -840,7 +847,8 @@ section {
 .portfolio-popup-btn-group {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 2rem;
   padding: 1rem;
 }
 
@@ -852,9 +860,19 @@ section {
   margin-bottom: 2rem;
 }
 
-.active {
+.activePopUp {
   visibility: visible;
   opacity: 1;
+}
+
+.pagination {
+  display: flex;
+  gap: 1rem;
+}
+
+.activeBtn {
+  background-color: #2A2A30;
+  color: #f5b32f;
 }
 
 .blog {
@@ -1342,7 +1360,7 @@ textarea.form-input {
     height: 8rem;
   }
   .skill-container .skills-card .skills-icon-container .skill-container img {
-    width: 5rem;
+    width: 4rem;
   }
   .skill-container .skills-card .skills-icon-container .skill-container p {
     font-size: 1.2rem;
@@ -1374,6 +1392,20 @@ textarea.form-input {
   .portfolio-popup-content-container {
     flex-direction: row;
   }
+  .portfolio-popup-content-container .content-container {
+    width: 50%;
+    justify-content: space-between;
+  }
+  .portfolio-popup-content-container .content-container .portfolio-popup-content-description {
+    padding: 2rem;
+  }
+  .portfolio-popup-content-container .content-container .portfolio-popup-btn-group {
+    gap: 4rem;
+    justify-content: flex-end;
+  }
+  .portfolio-popup-content-container p {
+    margin-bottom: 3rem;
+  }
   .btn-contact {
     align-self: flex-start;
   }
@@ -1381,9 +1413,6 @@ textarea.form-input {
 @media (min-width: 1200px) {
   .nav .nav-links {
     gap: 3rem;
-  }
-  .icon-container {
-    margin-left: 2rem;
   }
   .about-container {
     grid-template-columns: 1fr 1fr;

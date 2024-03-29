@@ -1,8 +1,12 @@
+import products from "../datas/projects.js";
+
+
 // hamburger menu - nyitás csukás
 const closeButton = document.querySelector('.js-hamburger-close-btn');
 const openButton = document.querySelector('.js-hamburger-open-btn');
 const nav = document.querySelector('.js-nav');
 const navLinks = document.querySelectorAll('.js-nav-link');
+const currentPage = window.location.pathname;
 
 function toggleNavClass() {
     nav.classList.toggle('openHamburgerMenu');
@@ -18,6 +22,8 @@ navLinks.forEach((link) => {
 
 
 /* A menü hoverjének változása görgetésre */
+
+if (currentPage === '/index.html') {
 const sections = document.querySelectorAll(".section-link");
 
 window.addEventListener('scroll', () => {
@@ -37,7 +43,7 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-
+};
 
 // a header tulajdonságainak változtatása nagyobb képernyőkön
 const header = document.querySelector('.header');
@@ -104,7 +110,7 @@ logoImage.addEventListener('mouseleave', () => {
 
 /*  blog swiper script  */
 const gallery = new Swiper(".gallery_slider", {
-  
+
     slidesPerView: getInitialSlidesPerView(),
     spaceBetween: 20,
     loop: true,
@@ -145,7 +151,7 @@ window.addEventListener('resize', function () {
 
 
 /* ============== Contact Section ============== */
-formInputs = document.querySelectorAll(".form-input");
+const formInputs = document.querySelectorAll(".form-input");
 
 formInputs.forEach(input => {
     input.addEventListener("focus", () => {
@@ -187,20 +193,144 @@ infoBoxes.forEach((box) => {
 
 
 
+// project cads render
+
+const mainPageCardWrapper = document.querySelector('.js-card-wrapper');
+const projectPageCardWrapper = document.querySelector('.js-projectPage-card-wrapper');
+const paginationWrapper = document.querySelector('.js-pagination');
+
+
+
+const cardsPerPage = 6;
+let Page = 1;
+
+function cardRender(page, data) {
+    page.innerHTML += `
+    <div class="portfolio-card">
+    <img src=${data.imageSrc} alt=${data.imageAlt} class="portolio-img">
+    <h2 class="portfolio-card-title">${data.title}</h2>
+
+    <div class="portfolio-content">
+        <p class="portfolio-description">${data.cardDescription}</p>
+        <h4 class="portfolio-details">${data.technolgies}</h4>
+        <div class="btn btn-portfolio">Részletek <i class="fa-solid fa-up-right-from-square"></i>
+        </div>
+    </div>
+
+    <div class="portfolio-popup">
+        <i class="fa-regular fa-circle-xmark close-btn"></i>
+        <h2 class="portfolio-popup-header">${data.title}</h2>
+        <div class="portfolio-popup-content-container">
+
+            <img src=${data.imageSrc} alt=${data.imageAlt}>
+            <div class="content-container">
+                <div class="portfolio-popup-content-description">
+                    <p>${data.popupDescription}</p>
+                    <ul>
+                       ${data.listItem1}
+                       ${data.listItem2}
+                       ${data.listItem3}
+                       ${data.listItem4}
+                       ${data.listItem5}
+                       ${data.listItem6}
+                    </ul>
+                </div>
+                <div class="portfolio-popup-btn-group">
+                    <a href=${data.githubLink}
+                        target="_blank" class="btn popup-btn">
+                        <i class="fa-brands fa-github"></i>
+                        Github</a>
+                    <a href=${data.githubPagesLink}
+                        target="_blank" class="btn popup-btn">
+                        <i class="fa-solid fa-desktop"></i>Nézd meg</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+`
+};
+
+
+// function renderCards(data) {
+//     const startIndex = (Page - 1) * cardsPerPage;
+//     const endIndex = Math.min(startIndex + cardsPerPage, data.length);
+
+//     projectPageCardWrapper.innerHTML = ''; 
+    
+
+//     for (let i = startIndex; i < endIndex; i++) {
+//         const card = data[i];
+//         cardRender(projectPageCardWrapper, card);
+        
+//     }
+// }
+
+// function renderPagination(data) {
+//     const totalPages = Math.ceil(data.length / cardsPerPage);
+//     paginationWrapper.innerHTML = '';
+
+//     for (let i = 1; i <= totalPages; i++) {
+//         const button = document.createElement('button');
+//         button.textContent = i;
+//         button.classList.add('pagination-btn','btn');
+//         button.addEventListener('click', () => {
+//             Page = i;
+//             renderCards(data);
+//             updatePaginationButtons();
+//         });
+//         paginationWrapper.appendChild(button);
+//     }
+
+//     updatePaginationButtons();
+// }
+
+// function updatePaginationButtons() {
+//     const buttons = document.querySelectorAll('.pagination-btn');
+//     buttons.forEach(button => {
+//         if (parseInt(button.textContent) === Page) {
+//             button.classList.add('activeBtn');
+//         } else {
+//             button.classList.remove('activeBtn');
+//         }
+//     });
+// }
+
+
+
+// rendering cards
+if (currentPage === '/index.html') {
+    products.slice(0, 3).forEach(data => {
+        cardRender(mainPageCardWrapper, data);
+    })
+} else if (currentPage === '/projects.html') {
+    products.forEach(data => {
+    cardRender(projectPageCardWrapper,data)
+    //renderCards(products)
+   // renderPagination(products)
+    
+}
+)};
+
+
+
 
 
 
 
 //portfólió popup ablak
 
-const modalViews = document.querySelectorAll(".portfolio-popup"),
-      modalBtns = document.querySelectorAll(".btn-portfolio"),
-      modalCloses = document.querySelectorAll(".close-btn");
+let modalViews = document.querySelectorAll(".portfolio-popup"),
+    modalBtns = document.querySelectorAll(".btn-portfolio"),
+    modalCloses = document.querySelectorAll(".close-btn");
 
 /*  modal függvény létrehozása */
 let modal = function (modalClick) {
     // a mmodalClickben kapott  indexű elemhez jozzáadja az active-modal osztályt ami ccs-ben a megjelenésért felelős
-    modalViews[modalClick].classList.add("active");
+    modalViews[modalClick].classList.add("activePopUp");
 
     modalViews[modalClick].addEventListener("click", function (e) {
         // Ellenőrizzük, hogy a kattintás a modal tartalmán belül vagy kívül történt
@@ -211,10 +341,10 @@ let modal = function (modalClick) {
 };
 /* a closeModal függvény létrehozása */
 let closeModal = function (modalClick) {
-    modalViews[modalClick].classList.remove("active");
+    modalViews[modalClick].classList.remove("activePopUp");
 }
 
-// végig megy a gombokon és futtat egy egy függvényt
+//végig megy a gombokon és futtat egy egy függvényt
 modalBtns.forEach((modalBtn, i) => {
     modalBtn.addEventListener('click', () => {
         modal(i);
@@ -227,5 +357,4 @@ modalCloses.forEach((modalClose, i) => {
         closeModal(i);
     });
 });
-
 
