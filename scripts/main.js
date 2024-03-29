@@ -1,4 +1,4 @@
-import products from "../datas/projects.js";
+import projects from "../datas/projects.js";
 
 
 // hamburger menu - nyitás csukás
@@ -24,57 +24,57 @@ navLinks.forEach((link) => {
 /* A menü hoverjének változása görgetésre */
 
 if (currentPage === '/index.html') {
-const sections = document.querySelectorAll(".section-link");
+    const sections = document.querySelectorAll(".section-link");
 
-window.addEventListener('scroll', () => {
-    const top = window.scrollY + 150; // Az eltérés miatt hozzáadunk 150 pixelt
+    window.addEventListener('scroll', () => {
+        const top = window.scrollY + 150; // Az eltérés miatt hozzáadunk 150 pixelt
 
-    sections.forEach(section => {
-        const id = section.getAttribute("id");
+        sections.forEach(section => {
+            const id = section.getAttribute("id");
 
-        const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+            const link = document.querySelector(`.nav-links a[href="#${id}"]`);
 
-        if (section.offsetTop <= top && section.offsetTop + section.offsetHeight > top) {
-            // Ha a szakasz fent látható, hozzáadjuk az "active" osztályt a hozzátartozó linkhez
-            link.classList.add('active');
-        } else {
-            // Ellenkező esetben eltávolítjuk az "active" osztályt a linkről
-            link.classList.remove('active');
-        }
+            if (section.offsetTop <= top && section.offsetTop + section.offsetHeight > top) {
+                // Ha a szakasz fent látható, hozzáadjuk az "active" osztályt a hozzátartozó linkhez
+                link.classList.add('active');
+            } else {
+                // Ellenkező esetben eltávolítjuk az "active" osztályt a linkről
+                link.classList.remove('active');
+            }
+        });
     });
-});
+
+
+    // a header tulajdonságainak változtatása nagyobb képernyőkön
+    const header = document.querySelector('.header');
+    function changeNavBg() {
+        const scrollY = window.scrollY;
+        const windowWidth = window.innerWidth;
+
+        header.style.transition = "all 0.3s ease";
+        logoImage.style.transition = "all 0.3s ease";
+        /* ha scroll történik akkor ez történik */
+        if (scrollY > 0 || windowWidth <= 992) {
+            header.style.background = "#191919";
+            header.style.height = "70px";
+            header.style.borderBottom = "1px solid #f5b32f8c";
+            logoImage.style.width = "45px";
+            logoImage.style.height = "45px";
+        }
+        /* ha nem akkor pedig marad ez ami elvileg az eredeti beállítés */
+        else {
+            header.style.height = "80px";
+            header.style.background = "transparent";
+            header.style.borderBottom = "0";
+            logoImage.style.width = "55px";
+            logoImage.style.height = "55px";
+        }
+    }
+    /* ezzel hívom meg a a renderelő függvényt mikor az oldalon scroll esemény történik */
+    window.addEventListener("scroll", changeNavBg);
+    window.addEventListener("load", changeNavBg);
+    window.addEventListener("resize", changeNavBg);
 };
-
-// a header tulajdonságainak változtatása nagyobb képernyőkön
-const header = document.querySelector('.header');
-function changeNavBg() {
-    const scrollY = window.scrollY;
-    const windowWidth = window.innerWidth;
-
-    header.style.transition = "all 0.3s ease";
-    logoImage.style.transition = "all 0.3s ease";
-    /* ha scroll történik akkor ez történik */
-    if (scrollY > 0 || windowWidth <= 992) {
-        header.style.background = "#191919";
-        header.style.height = "70px";
-        header.style.borderBottom = "1px solid #f5b32f8c";
-        logoImage.style.width = "45px";
-        logoImage.style.height = "45px";
-    }
-    /* ha nem akkor pedig marad ez ami elvileg az eredeti beállítés */
-    else {
-        header.style.height = "80px";
-        header.style.background = "transparent";
-        header.style.borderBottom = "0";
-        logoImage.style.width = "55px";
-        logoImage.style.height = "55px";
-    }
-}
-
-/* ezzel hívom meg a a renderelő függvényt mikor az oldalon scroll esemény történik */
-window.addEventListener("scroll", changeNavBg);
-window.addEventListener("load", changeNavBg);
-window.addEventListener("resize", changeNavBg);
 
 
 
@@ -201,8 +201,8 @@ const paginationWrapper = document.querySelector('.js-pagination');
 
 
 
-const cardsPerPage = 6;
-let Page = 1;
+// const cardsPerPage = 6;
+// let Page = 1;
 
 function cardRender(page, data) {
     page.innerHTML += `
@@ -260,12 +260,12 @@ function cardRender(page, data) {
 //     const endIndex = Math.min(startIndex + cardsPerPage, data.length);
 
 //     projectPageCardWrapper.innerHTML = ''; 
-    
+
 
 //     for (let i = startIndex; i < endIndex; i++) {
 //         const card = data[i];
 //         cardRender(projectPageCardWrapper, card);
-        
+
 //     }
 // }
 
@@ -303,17 +303,18 @@ function cardRender(page, data) {
 
 // rendering cards
 if (currentPage === '/index.html') {
-    products.slice(0, 3).forEach(data => {
+    projects.slice(0, 3).forEach(data => {
         cardRender(mainPageCardWrapper, data);
     })
 } else if (currentPage === '/projects.html') {
-    products.forEach(data => {
-    cardRender(projectPageCardWrapper,data)
-    //renderCards(products)
-   // renderPagination(products)
-    
-}
-)};
+    projects.forEach(data => {
+        cardRender(projectPageCardWrapper, data)
+        //renderCards(products)
+        // renderPagination(products)
+
+    }
+    )
+};
 
 
 
