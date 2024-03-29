@@ -41,6 +41,30 @@
     .quote-container {
         padding: 2rem;
     }
+
+    .footer {
+
+        .footerInfo {
+            flex-direction: row;
+            text-align: center;
+            gap: 2rem;
+            padding: .7rem 1rem;
+
+            a {
+                padding: .5rem;
+            }
+        }
+    }
+
+    .copyright-container {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .footer-social-media {
+        gap: 3rem;
+        padding: 1rem;
+    }
 }
 
 @media (min-width: 992px) {
@@ -243,7 +267,9 @@
 
     }
 
-
+.btn-contact {
+    align-self: flex-start;
+}
 
 
 }
@@ -351,6 +377,23 @@
         width: 60%;
         padding: 4rem;
         max-width: 1400px;
+    }
+
+    .footer {
+        justify-content: flex-end;
+        padding: 2rem 6rem 1rem;
+        gap: 4rem;
+
+        &-content-container {
+            flex-direction: row;
+            width: 100%;
+            align-items: stretch;
+            justify-content: space-between;
+        }
+
+        .footerInfo {
+            align-items: center;
+        }
     }
 }
 

@@ -1,5 +1,4 @@
 .footer {
-    min-height: 16rem;
     background: $footer-linear, url("../assets/img/footer_dark.jpg");
     background-position: center;
     background-size: cover;
@@ -13,10 +12,55 @@
     justify-content: space-between;
     border-top: 2px solid $main-color-55;
     z-index: 0;
+    gap: 1rem;
 
     img {
         width: 30px;
     }
+
+    &-content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footerInfo {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        padding: 0 1rem;
+        background-color: rgba($bg-light-darker , .4);
+        border-radius: .25rem;
+        border: 1px solid$main-color-30;
+
+        a {
+            display: inline-block;
+            color: $text-color-light;
+            font-size: 1rem;
+            padding: .5rem;
+            transition: color .3s ease, transform .3s ease;
+        }
+
+        a:hover {
+            color: $main-red;
+            transform: scale(1.1);
+        }
+    }
+
+    p {
+        font-size: .8rem;
+    }
+
+}
+
+.copyright-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .footer::before {
@@ -28,4 +72,29 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: -2;
+}
+
+.footer-social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: fit-content;
+    background-color: rgba($bg-light-darker , .4);
+    padding: .7rem;
+    border-radius: .25rem;
+    border: 1px solid $main-color-30;
+
+    .soc-icon {
+        font-size: 2rem;
+        color: $main-color;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .soc-icon:hover {
+        color: $main-red;
+        transform: rotate(15deg);
+    }
+
 }
