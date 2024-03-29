@@ -23,7 +23,7 @@ navLinks.forEach((link) => {
 
 /* A menü hoverjének változása görgetésre */
 
-if (currentPage === '/index.html') {
+if (currentPage === '/') {
     const sections = document.querySelectorAll(".section-link");
 
     window.addEventListener('scroll', () => {
@@ -302,18 +302,16 @@ function cardRender(page, data) {
 
 
 // rendering cards
-if (currentPage === '/index.html') {
+if (currentPage === '/') {
     projects.slice(0, 3).forEach(data => {
         cardRender(mainPageCardWrapper, data);
     })
 } else if (currentPage === '/projects.html') {
     projects.forEach(data => {
-        cardRender(projectPageCardWrapper, data)
+        cardRender(projectPageCardWrapper, data);
         //renderCards(products)
         // renderPagination(products)
-
-    }
-    )
+    })
 };
 
 
