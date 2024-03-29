@@ -7,6 +7,7 @@ const openButton = document.querySelector('.js-hamburger-open-btn');
 const nav = document.querySelector('.js-nav');
 const navLinks = document.querySelectorAll('.js-nav-link');
 const currentPage = window.location.pathname;
+console.log(currentPage);
 
 function toggleNavClass() {
     nav.classList.toggle('openHamburgerMenu');
@@ -23,7 +24,7 @@ navLinks.forEach((link) => {
 
 /* A menü hoverjének változása görgetésre */
 
-if (currentPage === '/') {
+if (currentPage === '/index.html') {
     const sections = document.querySelectorAll(".section-link");
 
     window.addEventListener('scroll', () => {
@@ -302,7 +303,7 @@ function cardRender(page, data) {
 
 
 // rendering cards
-if (currentPage === '/') {
+if (currentPage === '/index.html') {
     projects.slice(0, 3).forEach(data => {
         cardRender(mainPageCardWrapper, data);
     })
