@@ -181,7 +181,7 @@ function sendEmail(e) {
         statusBox.textContent = "Az üzenetet sikeresen elküldtük! ✅"
         setTimeout(() => {
             statusBox.textContent = ""
-        }, 5000);
+        }, 4000);
         contactForm.reset();
         const labels = contactForm.querySelectorAll('.form-label');
         labels.forEach(label => {
@@ -191,6 +191,9 @@ function sendEmail(e) {
         (error) => {
             console.log(error);
             statusBox.textContent = "Az üzenetet nem sikerült elküldeni! ❌"
+            setTimeout(() => {
+                statusBox.textContent = ""
+            }, 4000);
         }
     );
 }
