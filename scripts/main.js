@@ -1,5 +1,5 @@
 import projects from "../datas/projects.js";  // portfolio projects' datas
-import loginDatas from "../datas/emailjs_datas.js";
+import loginDatas from "../datas/emailjs_datas.js"; 
 
 
 
