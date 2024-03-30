@@ -90,10 +90,20 @@ if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '
 // Logo color change
 
 const logoImage = document.querySelector('.js-main-logo');
-if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/') {
+
+if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/' ||
+    currentPage === '/PK_main_portfolio_project/projects.html' || currentPage === '/projects.html' ||
+    currentPage === '/PK_main_portfolio_project/blog.html' || currentPage === '/blog.html' ||
+    currentPage === '/PK_main_portfolio_project/cookies.html' || currentPage === '/cookies.html' ||
+    currentPage === '/PK_main_portfolio_project/policy.html' || currentPage === '/policy.html' ||
+    currentPage === '/PK_main_portfolio_project/impresszum.html' || currentPage === '/impresszum.html' 
+    ) {
+
     var whiteColorSrc = './assets/img/Logo_Thomas_light.png';
     var mainColorSrc = './assets/img/Logo_Thomas_main_color.svg';
+
 } else if (currentPage === '/PK_main_portfolio_project/en/index.html' || currentPage === '/en/index.html' || currentPage === '/en/PK_main_portfolio_project/') {
+    
     whiteColorSrc = '../assets/img/Logo_Thomas_light.png';
     mainColorSrc = '../assets/img/Logo_Thomas_main_color.svg';
 }
