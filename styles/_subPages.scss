@@ -1,0 +1,111 @@
+// impresszum page
+.impresszum {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 3rem;
+    padding: 5rem 0 3rem;
+
+    .page-owner-container,
+    .hosting-provider-container {
+        text-align: center;
+        line-height: 1.7rem;
+
+        .content-item-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h2 {
+            margin: 1rem 0;
+            color: $main-color;
+            font-size: 1.1rem;
+        }
+
+        strong {
+            color: $main-color;
+            margin-right: .5rem;
+        }
+
+        p {
+
+
+            font-size: 1rem;
+
+            a {
+                color: $text-color-light;
+            }
+
+
+        }
+    }
+}
+
+
+
+// policy page
+.policy {
+    padding: 4rem 2rem;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    &-wrapper {
+        max-width: 800px;
+        margin: auto;
+    }
+
+
+    h2 {
+        color: $main-color;
+        margin-bottom: 2rem;
+        font-size: 1.1;
+    }
+
+    p {
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+}
+
+
+// cookies page
+.cookies {
+    padding: 4rem 2rem;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    &-wrapper {
+        max-width: 800px;
+        margin: auto;
+    }
+
+
+    h2 {
+        color: $main-color;
+        margin-bottom: 2rem;
+        font-size: 1.1;
+    }
+
+    p {
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+
+    strong {
+        display: inline-block;
+        color: $main-color;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        color: $main-red;
+    }
+}

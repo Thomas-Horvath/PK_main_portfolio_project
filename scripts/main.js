@@ -1,5 +1,5 @@
 import projects from "../datas/projects.js";  // portfolio projects' datas
-
+import loginDatas from "../datas/emailjs_datas.js";
 
 
 
@@ -9,6 +9,7 @@ const openButton = document.querySelector('.js-hamburger-open-btn');
 const nav = document.querySelector('.js-nav');
 const navLinks = document.querySelectorAll('.js-nav-link');
 const currentPage = window.location.pathname;
+console.log(currentPage);
 
 
 function toggleNavClass() {
@@ -103,6 +104,8 @@ logoImage.addEventListener('mouseleave', () => {
 
 
 // blog swiper script  
+if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/') {
+   
 const gallery = new Swiper(".gallery_slider", {
 
     slidesPerView: getInitialSlidesPerView(),
@@ -125,7 +128,6 @@ const gallery = new Swiper(".gallery_slider", {
 });
 
 
-
 function getInitialSlidesPerView() {
     return window.innerWidth > 992 ? 2 : 1;
 }
@@ -135,6 +137,7 @@ window.addEventListener('resize', function () {
     gallery.update(); 
 });
 
+};
 
 
 
@@ -143,6 +146,8 @@ window.addEventListener('resize', function () {
 
 
 // Contact Section 
+
+//label 
 const formInputs = document.querySelectorAll(".form-input");
 
 formInputs.forEach(input => {
@@ -157,6 +162,44 @@ formInputs.forEach(input => {
     });
 });
 
+/* ============== Send Email By EmailJS ============== */
+
+const contactForm = document.getElementById("contact-form");
+const statusBox = document.querySelector(".form-status-box p");
+
+// emailjs login datas
+const serviceID = loginDatas[0].serviceID ;
+const templateID = loginDatas[0].templateID;
+const templateParams = contactForm;
+const publicKey = loginDatas[0].publicKey ;
+
+
+function sendEmail(e) {
+    e.preventDefault();
+    emailjs.sendForm(serviceID, templateID, templateParams, publicKey).then(response => {
+        console.log(response.status, response.text);
+        statusBox.textContent = "Az üzenetet sikeresen elküldtük! ✅"
+        setTimeout(() => {
+            statusBox.textContent = ""
+        }, 5000);
+        contactForm.reset();
+        const labels = contactForm.querySelectorAll('.form-label');
+        labels.forEach(label => {
+            label.classList.remove('focus');
+        });
+    },
+        (error) => {
+            console.log(error);
+            statusBox.textContent = "Az üzenetet nem sikerült elküldeni! ❌"
+        }
+    );
+}
+if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/') {
+contactForm.addEventListener("submit", sendEmail);
+};
+
+
+
 
 
 
@@ -164,6 +207,7 @@ formInputs.forEach(input => {
 const infoBoxes = document.querySelectorAll('.info-title');
 
 infoBoxes.forEach((box) => {
+   
     const icon = box.querySelector('.title-icon'); 
     const content = box.nextElementSibling; 
 
@@ -232,10 +276,10 @@ function cardRender(page, data) {
                     <a href=${data.githubLink}
                         target="_blank" class="btn popup-btn">
                         <i class="fa-brands fa-github"></i>
-                        Github</a>
+                        Code</a>
                     <a href=${data.githubPagesLink}
                         target="_blank" class="btn popup-btn">
-                        <i class="fa-solid fa-desktop"></i>Nézd meg</a>
+                        <i class="fa-solid fa-desktop"></i>Demo</a>
                 </div>
 
             </div>

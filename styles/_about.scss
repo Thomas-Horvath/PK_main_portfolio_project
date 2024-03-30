@@ -49,6 +49,7 @@
     position: relative;
     z-index: 2;
     border-radius: .25rem;
+    
 }
 
 .about-left img {
@@ -57,6 +58,7 @@
     z-index: 1;
     background: rgb(0, 0, 0);
     border-radius: .25rem;
+    object-fit: cover;
 }
 
 .about-img::after {

@@ -1,7 +1,3 @@
 node_modules/
 notes.md 
-
-_darkMode.scss
-
-dark.js
-.env
+emailjs_datas.js

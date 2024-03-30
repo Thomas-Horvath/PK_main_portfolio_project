@@ -143,9 +143,7 @@ section {
     min-height: 100vh;
     padding-top: 3rem;
 }
-.impressum, .cookies, .policy {
-    text-align: center
-}
+
 
 @import 'mainHeading';
 @import 'header';
@@ -159,5 +157,5 @@ section {
 @import 'contact';
 @import 'footer';
 @import 'scrollUpIcon';
-
+@import 'subPages';
 @import 'mediaQueries';

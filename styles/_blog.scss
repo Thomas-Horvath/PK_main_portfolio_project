@@ -84,6 +84,7 @@
             text-align: center;
             padding: .6rem;
             font-size: 1.2rem;
+            color: $main-color;
         }
 
         img {
@@ -105,11 +106,29 @@
 
 // blog page
 .blogPage-wrapper {
-    padding:  1rem ;
-    .blog-section {
-        padding-top: 5rem;
-       height: 100vh;
-       text-align: center;
+    padding:  1rem 1rem;
+
+    .blog-article-container {
+        min-height: 100vh;
+        padding: 4rem 0;
+        width: 100%;
+
+        .blog-section {
+           
+            padding: 1rem 1.5rem;
+            border: 2px solid $main-color;
+            border-radius: 10px;
+           
+            min-height: 100vh;
+
+            h2 {
+                text-align: center;
+                padding: 1rem 0;
+            }
+
+            p {
+                margin-bottom: 1rem;
+            }
+        }
     }
-   
 }
