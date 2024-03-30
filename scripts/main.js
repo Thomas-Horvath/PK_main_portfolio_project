@@ -1,13 +1,15 @@
-import projects from "../datas/projects.js";
+import projects from "../datas/projects.js";  // portfolio projects' datas
 
 
-// hamburger menu - nyitás csukás
+
+
+// hamburger menu 
 const closeButton = document.querySelector('.js-hamburger-close-btn');
 const openButton = document.querySelector('.js-hamburger-open-btn');
 const nav = document.querySelector('.js-nav');
 const navLinks = document.querySelectorAll('.js-nav-link');
 const currentPage = window.location.pathname;
-console.log(currentPage);
+
 
 function toggleNavClass() {
     nav.classList.toggle('openHamburgerMenu');
@@ -22,13 +24,13 @@ navLinks.forEach((link) => {
 
 
 
-/* A menü hoverjének változása görgetésre */
+// menu links hover
 
 if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/') {
     const sections = document.querySelectorAll(".section-link");
 
     window.addEventListener('scroll', () => {
-        const top = window.scrollY + 150; // Az eltérés miatt hozzáadunk 150 pixelt
+        const top = window.scrollY + 150;
 
         sections.forEach(section => {
             const id = section.getAttribute("id");
@@ -36,17 +38,16 @@ if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '
             const link = document.querySelector(`.nav-links a[href="#${id}"]`);
 
             if (section.offsetTop <= top && section.offsetTop + section.offsetHeight > top) {
-                // Ha a szakasz fent látható, hozzáadjuk az "active" osztályt a hozzátartozó linkhez
+            
                 link.classList.add('active');
             } else {
-                // Ellenkező esetben eltávolítjuk az "active" osztályt a linkről
+              
                 link.classList.remove('active');
             }
         });
     });
 
-
-    // a header tulajdonságainak változtatása nagyobb képernyőkön
+   
     const header = document.querySelector('.header');
     function changeNavBg() {
         const scrollY = window.scrollY;
@@ -54,7 +55,7 @@ if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '
 
         header.style.transition = "all 0.3s ease";
         logoImage.style.transition = "all 0.3s ease";
-        /* ha scroll történik akkor ez történik */
+        
         if (scrollY > 0 || windowWidth <= 992) {
             header.style.background = "#191919";
             header.style.height = "70px";
@@ -62,7 +63,7 @@ if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '
             logoImage.style.width = "45px";
             logoImage.style.height = "45px";
         }
-        /* ha nem akkor pedig marad ez ami elvileg az eredeti beállítés */
+       
         else {
             header.style.height = "80px";
             header.style.background = "transparent";
@@ -71,7 +72,7 @@ if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '
             logoImage.style.height = "55px";
         }
     }
-    /* ezzel hívom meg a a renderelő függvényt mikor az oldalon scroll esemény történik */
+
     window.addEventListener("scroll", changeNavBg);
     window.addEventListener("load", changeNavBg);
     window.addEventListener("resize", changeNavBg);
@@ -83,33 +84,25 @@ if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '
 
 
 
-// logó színének változtatása egér ráhúzásra
-
-// kép kiválasztása
+// Logo color change
 const logoImage = document.querySelector('.js-main-logo');
-
-// Az elérési útak
 const whiteColorSrc = './assets/img/Logo_Thomas_light.png';
 const mainColorSrc = './assets/img/Logo_Thomas_main_color.svg';
 
-// Eseménykezelő hozzáadása a hover eseményhez
+
 logoImage.addEventListener('mouseenter', () => {
     logoImage.src = mainColorSrc;
 });
-
-// Eseménykezelő hozzáadása a hover esemény vége eseményhez
 logoImage.addEventListener('mouseleave', () => {
     logoImage.src = whiteColorSrc;
 });
 
-// const windowWidth = window.innerWidth;
-// console.log(windowWidth);
-// let initialSlidesPerView = 1;
-// if (windowWidth > 992) {
-//     initialSlidesPerView = 2;
-// }
 
-/*  blog swiper script  */
+
+
+
+
+// blog swiper script  
 const gallery = new Swiper(".gallery_slider", {
 
     slidesPerView: getInitialSlidesPerView(),
@@ -121,7 +114,7 @@ const gallery = new Swiper(".gallery_slider", {
         prevEl: ".swiper-button-next",
     },
     autoplay: {
-        delay: 3000,
+        delay: 5000,
 
     },
     pagination: {
@@ -137,11 +130,9 @@ function getInitialSlidesPerView() {
     return window.innerWidth > 992 ? 2 : 1;
 }
 
-// Eseményfigyelő az ablak méretének változására
 window.addEventListener('resize', function () {
-    // Frissítjük a slidesPerView beállítást az aktuális ablakméret alapján
     gallery.params.slidesPerView = getInitialSlidesPerView();
-    gallery.update(); // Frissítjük a Swipert
+    gallery.update(); 
 });
 
 
@@ -151,7 +142,7 @@ window.addEventListener('resize', function () {
 
 
 
-/* ============== Contact Section ============== */
+// Contact Section 
 const formInputs = document.querySelectorAll(".form-input");
 
 formInputs.forEach(input => {
@@ -169,22 +160,21 @@ formInputs.forEach(input => {
 
 
 
-//  info tartalom megjelenítése
+// About info 
 const infoBoxes = document.querySelectorAll('.info-title');
 
 infoBoxes.forEach((box) => {
-    const icon = box.querySelector('.title-icon'); // Az adott boxhoz tartozó ikon
-    const content = box.nextElementSibling; // Az adott boxhoz tartozó content
+    const icon = box.querySelector('.title-icon'); 
+    const content = box.nextElementSibling; 
 
     box.addEventListener('click', function () {
         const isDisplayBlock = content.classList.contains('displayBlock');
 
-        // Az összes content elrejtése
         document.querySelectorAll('.info-content').forEach(item => item.classList.remove('displayBlock'));
-        // Az összes ikon átállítása arrow-down-ra
+        
         document.querySelectorAll('.title-icon').forEach(item => item.classList.replace('fa-circle-arrow-up', 'fa-circle-arrow-down'));
 
-        // Az aktuális content megjelenítése és az ikon beállítása
+      
         content.classList.toggle('displayBlock', !isDisplayBlock);
         icon.classList.toggle('fa-circle-arrow-up', !isDisplayBlock);
         icon.classList.toggle('fa-circle-arrow-down', isDisplayBlock);
@@ -202,8 +192,6 @@ const paginationWrapper = document.querySelector('.js-pagination');
 
 
 
-// const cardsPerPage = 6;
-// let Page = 1;
 
 function cardRender(page, data) {
     page.innerHTML += `
@@ -226,7 +214,9 @@ function cardRender(page, data) {
             <img src=${data.imageSrc} alt=${data.imageAlt}>
             <div class="content-container">
                 <div class="portfolio-popup-content-description">
+                <h3>A projekt leírása:</h3>
                     <p>${data.popupDescription}</p>
+                    <h3>A felhasznált technikák:</h3>
                     <ul>
                        ${data.listItem1}
                        ${data.listItem2}
@@ -235,6 +225,8 @@ function cardRender(page, data) {
                        ${data.listItem5}
                        ${data.listItem6}
                     </ul>
+                    <h3>A projekt típusa:</h3>
+                    <p>${data.type}</p>
                 </div>
                 <div class="portfolio-popup-btn-group">
                     <a href=${data.githubLink}
@@ -256,63 +248,17 @@ function cardRender(page, data) {
 };
 
 
-// function renderCards(data) {
-//     const startIndex = (Page - 1) * cardsPerPage;
-//     const endIndex = Math.min(startIndex + cardsPerPage, data.length);
-
-//     projectPageCardWrapper.innerHTML = ''; 
-
-
-//     for (let i = startIndex; i < endIndex; i++) {
-//         const card = data[i];
-//         cardRender(projectPageCardWrapper, card);
-
-//     }
-// }
-
-// function renderPagination(data) {
-//     const totalPages = Math.ceil(data.length / cardsPerPage);
-//     paginationWrapper.innerHTML = '';
-
-//     for (let i = 1; i <= totalPages; i++) {
-//         const button = document.createElement('button');
-//         button.textContent = i;
-//         button.classList.add('pagination-btn','btn');
-//         button.addEventListener('click', () => {
-//             Page = i;
-//             renderCards(data);
-//             updatePaginationButtons();
-//         });
-//         paginationWrapper.appendChild(button);
-//     }
-
-//     updatePaginationButtons();
-// }
-
-// function updatePaginationButtons() {
-//     const buttons = document.querySelectorAll('.pagination-btn');
-//     buttons.forEach(button => {
-//         if (parseInt(button.textContent) === Page) {
-//             button.classList.add('activeBtn');
-//         } else {
-//             button.classList.remove('activeBtn');
-//         }
-//     });
-// }
-
 
 
 // rendering cards
 if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/') {
     projects.slice(0, 3).forEach(data => {
         cardRender(mainPageCardWrapper, data);
-    })
+    });
 } else if (currentPage === '/PK_main_portfolio_project/projects.html' || currentPage === '/projects.html') {
     projects.forEach(data => {
         cardRender(projectPageCardWrapper, data);
-        //renderCards(products)
-        // renderPagination(products)
-    })
+    });
 };
 
 
@@ -321,37 +267,32 @@ if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '
 
 
 
-//portfólió popup ablak
+//portfolio  popup window
 
 let modalViews = document.querySelectorAll(".portfolio-popup"),
     modalBtns = document.querySelectorAll(".btn-portfolio"),
     modalCloses = document.querySelectorAll(".close-btn");
 
-/*  modal függvény létrehozása */
-let modal = function (modalClick) {
-    // a mmodalClickben kapott  indexű elemhez jozzáadja az active-modal osztályt ami ccs-ben a megjelenésért felelős
-    modalViews[modalClick].classList.add("activePopUp");
 
+let modal = function (modalClick) {
+    modalViews[modalClick].classList.add("activePopUp");
     modalViews[modalClick].addEventListener("click", function (e) {
-        // Ellenőrizzük, hogy a kattintás a modal tartalmán belül vagy kívül történt
         if (e.target === this) {
             closeModal(modalClick);
-        }
+        };
     });
 };
-/* a closeModal függvény létrehozása */
+
 let closeModal = function (modalClick) {
     modalViews[modalClick].classList.remove("activePopUp");
-}
+};
 
-//végig megy a gombokon és futtat egy egy függvényt
+
 modalBtns.forEach((modalBtn, i) => {
     modalBtn.addEventListener('click', () => {
         modal(i);
-    })
-})
-
-
+    });
+});
 modalCloses.forEach((modalClose, i) => {
     modalClose.addEventListener("click", () => {
         closeModal(i);

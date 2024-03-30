@@ -19,7 +19,7 @@
     }
 
     // about
-    .btn-group {
+    .btn-group, .project-btn-group {
         flex-direction: row;
         justify-content: center;
         gap: 3rem;
@@ -145,9 +145,7 @@
     }
 
     .home-social-media {
-
         display: flex;
-
     }
 
 
@@ -155,7 +153,7 @@
     // about section
     .about-right {
         .about-section {
-            padding: 5rem;
+            padding: 5rem 5rem 0 ;
         }
     }
 
@@ -263,26 +261,27 @@
     .portfolio-popup-content-container {
         flex-direction: row;
 
-.content-container {
-    width: 50%;
-    justify-content: space-between;
-    .portfolio-popup-content-description {
-        padding: 2rem;
-    }
-    .portfolio-popup-btn-group {
-        gap: 4rem;
-        justify-content: flex-end;
-    }
-}
-p {
-    margin-bottom: 3rem;
-}
+        .content-container {
+            width: 50%;
+            justify-content: space-between;
+
+            .portfolio-popup-content-description {
+                padding: 2rem;
+            }
+
+            .portfolio-popup-btn-group {
+                gap: 4rem;
+                justify-content: flex-end;
+            }
+        }
+
+      
 
     }
 
-.btn-contact {
-    align-self: flex-start;
-}
+    .btn-contact {
+        align-self: flex-start;
+    }
 
 
 }
@@ -294,7 +293,7 @@ p {
             gap: 3rem;
         }
     }
- 
+
     .about-container {
         grid-template-columns: 1fr 1fr;
         overflow: hidden;
@@ -321,7 +320,7 @@ p {
         margin-bottom: 0;
 
         .about-section {
-            padding: 2rem 3rem 2rem 2rem;
+            padding: 2rem 3rem 0rem 2rem;
             margin-bottom: 0;
 
             h3 {
@@ -382,22 +381,5 @@ p {
         max-width: 1400px;
     }
 
-    .footer {
-        justify-content: flex-end;
-        padding: 2rem 6rem 1rem;
-        gap: 4rem;
 
-        &-content-container {
-            flex-direction: row;
-            width: 100%;
-            align-items: stretch;
-            justify-content: space-between;
-        }
-
-        .footerInfo {
-            align-items: center;
-        }
-    }
 }
-
-

@@ -8,9 +8,31 @@
     grid-template-columns: 1fr ;
     margin-top: 2rem;
     overflow: hidden;
+    grid-template-areas:
+    'aboutLeft'
+     'aboutRight'
+     'btnGroup'
+    'waveYellowReverse '
+    'moreInfo '
+    'waveYellow ';
+}
+.wave-yellow {
+    grid-area: waveYellow;
+  
+
+}
+.wave-yellow-reverse {
+    grid-area: waveYellowReverse;
+}
+.btn-group {
+    grid-area: btnGroup;
+}
+.more-info-container {
+    grid-area: moreInfo;
 }
 
 .about-left {
+    grid-area: aboutLeft;
     padding: 2rem;
     display: flex;
     justify-content: center;
@@ -64,10 +86,10 @@
 }
 
 .about-right {
+    grid-area: aboutRight;
     overflow: hidden;
     .about-section {
         padding: 1rem;
-        margin-bottom: 5rem;
     }
     strong {
         color: $main-color;

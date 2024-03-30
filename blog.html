@@ -7,6 +7,13 @@
     <meta name="description" content="Horváth Tamás vagyok, junior frontend fejlesztő és Adatbázis
         Specialista.">
 
+    <!-- Dark Light MODE -->
+    <!-- <script src="./scripts/theme.js"></script>
+    <script>
+        const theme = new Theme("dark");
+        theme.init();
+    </script>
+    <title>ThomasHorvath.Hu - Webfejlesztés</title> -->
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="./assets/icons/favicon/Logo_Thomas_main_color.svg" type="image/x-icon">
@@ -38,7 +45,6 @@
 <body>
 
     <!-- ************************* HEADER SECTION ******************************** -->
-
     <header class="header">
         <div class="header-container">
 
@@ -53,8 +59,8 @@
                     <li><a class="nav-link js-nav-link" href="index.html#home">Kezdőlap</a></li>
                     <li><a class="nav-link js-nav-link" href="index.html#about">Rólam</a></li>
                     <li><a class="nav-link js-nav-link" href="index.html#skills">Ismereteim</a></li>
-                    <li><a class="nav-link js-nav-link active" href="index.html#portfolio">Munkáim</a></li>
-                    <li><a class="nav-link js-nav-link" href="index.html#blog">Blog</a></li>
+                    <li><a class="nav-link js-nav-link " href="index.html#portfolio">Munkáim</a></li>
+                    <li><a class="nav-link js-nav-link active" href="index.html#blog">Blog</a></li>
                     <li><a class="nav-link js-nav-link" href="index.html#contact">Kapcsolat</a></li>
                 </ul>
                 <i class="fa-solid fa-xmark hamburger-btn-close js-hamburger-close-btn"></i>
@@ -74,36 +80,22 @@
     </header>
 
 
-    <section class="portfolio section-link" id="portfolio">
+    <main class="blogPage-wrapper">
 
-       
+        <article class="blog-1 blog-section" id="blog-1">
+            <h2>1. Html a gyakorlatban</h2>
+        </article>
+        <article class="blog-2 blog-section" id="blog-2">
+            <h2>2. A CSS varázslat</h2>
+        </article>
+        <article class="blog-3 blog-section" id="blog-3">
+            <h2>3. JavaScript</h2>
+        </article>
+        <article class="blog-4 blog-section" id="blog-4">
+            <h2>4. Vigyázz az adataidra</h2>
+        </article>
 
-
-
-        <div class="portfolio-wrapper">
-            <div class="project-btn-group">
-
-                <a href="" class="btn">weboldalak</a>
-                <a href="" class="btn">Adatbázis</a>
-                <a href="" class="btn">Back-End</a>
-                <a href="" class="btn">Alkalmazás</a>
-            </div>
-            <div class="card-wrapper js-projectPage-card-wrapper"></div>
-            <div class="pagination js-pagination">
-                <button class="pagination-btn btn activeBtn">1</button>
-                <button class="pagination-btn btn">2</button>
-
-            </div>
-       </div>
-        
-
- 
-    </section>
-
-
-
-
-
+    </main>
 
 
 

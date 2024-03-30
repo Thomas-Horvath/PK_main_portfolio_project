@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     padding: 2rem 5rem;
-    min-height: 350px;
+    min-height: 600px;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('../assets/img/qoute_section-bg.jpg');
@@ -16,8 +16,8 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-
-    margin-top: 2rem;
+z-index: -1;
+    margin-top: -20rem;
 
 
     p {
@@ -42,7 +42,7 @@
     background: $bg-card;
     width: 80%;
     height: 200px;
-    z-index: 0;
+    z-index: 1;
     position: absolute;
    bottom: -3rem;
     margin: auto;
@@ -54,4 +54,5 @@
     border: 1px solid $main-color-55;
     border-radius: .25rem;
     box-shadow: 4px 4px 10px $black;
+    z-index: 1;
 }

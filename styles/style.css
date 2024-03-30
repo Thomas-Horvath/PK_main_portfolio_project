@@ -160,6 +160,10 @@ section {
   padding-top: 3rem;
 }
 
+.impressum, .cookies, .policy {
+  text-align: center;
+}
+
 /*============================== main titles ===============================77 */
 .main-heading {
   position: relative;
@@ -456,9 +460,27 @@ section {
   grid-template-columns: 1fr;
   margin-top: 2rem;
   overflow: hidden;
+  grid-template-areas: "aboutLeft" "aboutRight" "btnGroup" "waveYellowReverse " "moreInfo " "waveYellow ";
+}
+
+.wave-yellow {
+  grid-area: waveYellow;
+}
+
+.wave-yellow-reverse {
+  grid-area: waveYellowReverse;
+}
+
+.btn-group {
+  grid-area: btnGroup;
+}
+
+.more-info-container {
+  grid-area: moreInfo;
 }
 
 .about-left {
+  grid-area: aboutLeft;
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -512,11 +534,11 @@ section {
 }
 
 .about-right {
+  grid-area: aboutRight;
   overflow: hidden;
 }
 .about-right .about-section {
   padding: 1rem;
-  margin-bottom: 5rem;
 }
 .about-right strong {
   color: #f5b32f;
@@ -617,13 +639,14 @@ section {
   align-items: center;
   justify-content: center;
   padding: 2rem 5rem;
-  min-height: 350px;
+  min-height: 600px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/img/qoute_section-bg.jpg");
   background-size: cover/contain;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  margin-top: 2rem;
+  z-index: -1;
+  margin-top: -20rem;
 }
 .quote p {
   font-size: 1.1rem;
@@ -643,7 +666,7 @@ section {
   background: rgba(68, 68, 68, 0.4666666667);
   width: 80%;
   height: 200px;
-  z-index: 0;
+  z-index: 1;
   position: absolute;
   bottom: -3rem;
   margin: auto;
@@ -655,6 +678,7 @@ section {
   border: 1px solid rgba(245, 179, 47, 0.5490196078);
   border-radius: 0.25rem;
   box-shadow: 4px 4px 10px #000;
+  z-index: 1;
 }
 
 .skills {
@@ -714,6 +738,10 @@ section {
 
 .skills-card:hover {
   border-color: #f5b32f;
+}
+
+.portfolio .main-heading {
+  margin-bottom: 1rem;
 }
 
 .portfolio-wrapper {
@@ -777,13 +805,10 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .portfolio-content p {
   text-align: center;
-}
-.portfolio-content h4 {
-  margin: 1rem 0;
 }
 
 .portfolio-popup {
@@ -791,7 +816,7 @@ section {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #191919;
   z-index: 3;
   display: flex;
@@ -811,16 +836,18 @@ section {
 
 .portfolio-popup-content-container {
   width: 100%;
+  max-width: 1200px;
   height: 100%;
   display: flex;
   flex-direction: column;
   border: 2px solid #f5b32f;
   border-radius: 6px;
-  overflow: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .portfolio-popup-content-container img {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 300px;
   margin: auto;
   object-fit: cover;
@@ -829,6 +856,13 @@ section {
 .portfolio-popup-content-container p,
 .portfolio-popup-content-container ul {
   padding: 1rem 1rem 0;
+}
+.portfolio-popup-content-container li {
+  list-style: disc;
+  margin-left: 2rem;
+}
+.portfolio-popup-content-container h3 {
+  color: rgba(245, 179, 47, 0.5490196078);
 }
 .portfolio-popup-content-container .content-container {
   display: flex;
@@ -848,6 +882,7 @@ section {
   width: 100%;
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 2rem;
   padding: 1rem;
 }
@@ -868,11 +903,26 @@ section {
 .pagination {
   display: flex;
   gap: 1rem;
+  margin-bottom: 3rem;
 }
 
 .activeBtn {
   background-color: #2A2A30;
   color: #f5b32f;
+}
+
+.project-btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 3rem 0 1rem;
+  width: 100%;
+}
+.project-btn-group .about-btn,
+.project-btn-group .btn-secund {
+  width: 80%;
 }
 
 .blog {
@@ -911,14 +961,6 @@ section {
   padding: 0 1rem;
 }
 
-.blog-content {
-  width: 250px;
-  height: 400px;
-  background: #2A2A30;
-  margin: auto;
-  border: 2px solid #f5b32f;
-}
-
 .swiper-button-prev,
 .swiper-button-next {
   color: #111111;
@@ -941,6 +983,49 @@ section {
   background: #f5b32f;
   width: 1rem;
   height: 1rem;
+}
+
+.blog-content {
+  width: 250px;
+  height: 400px;
+  background: #2A2A30;
+  margin: auto;
+  border: 2px solid #f5b32f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.25rem;
+}
+.blog-content .content-top {
+  display: flex;
+  flex-direction: column;
+}
+.blog-content .content-top h2 {
+  text-align: center;
+  padding: 0.6rem;
+  font-size: 1.2rem;
+}
+.blog-content .content-top img {
+  max-width: 80%;
+  margin: 1rem 0;
+  align-self: center;
+}
+.blog-content .content-top p {
+  padding: 0.5rem 1rem;
+  line-height: 1.5rem;
+}
+.blog-content a {
+  margin-bottom: 1rem;
+}
+
+.blogPage-wrapper {
+  padding: 1rem;
+}
+.blogPage-wrapper .blog-section {
+  padding-top: 5rem;
+  height: 100vh;
+  text-align: center;
 }
 
 .contact {
@@ -1116,17 +1201,14 @@ textarea.form-input {
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 0;
   padding: 0 1rem;
-  background-color: rgba(42, 42, 48, 0.4);
-  border-radius: 0.25rem;
-  border: 1px solid rgba(245, 179, 47, 0.2);
+  margin-bottom: 3rem;
 }
 .footer .footerInfo a {
   display: inline-block;
   color: #F1F5F2;
-  font-size: 1rem;
-  padding: 0.5rem;
+  font-size: 1.3rem;
+  padding: 1rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 .footer .footerInfo a:hover {
@@ -1161,14 +1243,13 @@ textarea.form-input {
   align-items: center;
   gap: 2rem;
   width: fit-content;
-  background-color: rgba(42, 42, 48, 0.4);
   padding: 0.7rem;
   border-radius: 0.25rem;
-  border: 1px solid rgba(245, 179, 47, 0.2);
 }
 .footer-social-media .soc-icon {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #f5b32f;
+  padding: 0.8rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 .footer-social-media .soc-icon:hover {
@@ -1218,13 +1299,14 @@ textarea.form-input {
     visibility: visible;
     opacity: 1;
   }
-  .btn-group {
+  .btn-group, .project-btn-group {
     flex-direction: row;
     justify-content: center;
     gap: 3rem;
   }
   .btn-group .about-btn,
-  .btn-group .btn-secund {
+  .btn-group .btn-secund, .project-btn-group .about-btn,
+  .project-btn-group .btn-secund {
     width: fit-content;
   }
   .quote p {
@@ -1314,7 +1396,7 @@ textarea.form-input {
     display: flex;
   }
   .about-right .about-section {
-    padding: 5rem;
+    padding: 5rem 5rem 0;
   }
   .about-left {
     align-items: start;
@@ -1403,9 +1485,6 @@ textarea.form-input {
     gap: 4rem;
     justify-content: flex-end;
   }
-  .portfolio-popup-content-container p {
-    margin-bottom: 3rem;
-  }
   .btn-contact {
     align-self: flex-start;
   }
@@ -1431,7 +1510,7 @@ textarea.form-input {
     margin-bottom: 0;
   }
   .about-right .about-section {
-    padding: 2rem 3rem 2rem 2rem;
+    padding: 2rem 3rem 0rem 2rem;
     margin-bottom: 0;
   }
   .about-right .about-section h3 {
@@ -1476,19 +1555,5 @@ textarea.form-input {
     width: 60%;
     padding: 4rem;
     max-width: 1400px;
-  }
-  .footer {
-    justify-content: flex-end;
-    padding: 2rem 6rem 1rem;
-    gap: 4rem;
-  }
-  .footer-content-container {
-    flex-direction: row;
-    width: 100%;
-    align-items: stretch;
-    justify-content: space-between;
-  }
-  .footer .footerInfo {
-    align-items: center;
   }
 }

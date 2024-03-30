@@ -30,17 +30,14 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-        gap: 0;
         padding: 0 1rem;
-        background-color: rgba($bg-light-darker , .4);
-        border-radius: .25rem;
-        border: 1px solid$main-color-30;
+        margin-bottom: 3rem;
 
         a {
             display: inline-block;
             color: $text-color-light;
-            font-size: 1rem;
-            padding: .5rem;
+            font-size: 1.3rem;
+            padding: 1rem;
             transition: color .3s ease, transform .3s ease;
         }
 
@@ -81,14 +78,13 @@
     align-items: center;
     gap: 2rem;
     width: fit-content;
-    background-color: rgba($bg-light-darker , .4);
     padding: .7rem;
     border-radius: .25rem;
-    border: 1px solid $main-color-30;
 
     .soc-icon {
-        font-size: 2rem;
+        font-size: 3rem;
         color: $main-color;
+        padding: .8rem;
         transition: transform 0.3s ease, color 0.3s ease;
     }
 
