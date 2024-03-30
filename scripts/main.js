@@ -24,7 +24,7 @@ navLinks.forEach((link) => {
 
 /* A menü hoverjének változása görgetésre */
 
-if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/') {
+if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/') {
     const sections = document.querySelectorAll(".section-link");
 
     window.addEventListener('scroll', () => {
@@ -303,7 +303,7 @@ function cardRender(page, data) {
 
 
 // rendering cards
-if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/') {
+if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/') {
     projects.slice(0, 3).forEach(data => {
         cardRender(mainPageCardWrapper, data);
     })
