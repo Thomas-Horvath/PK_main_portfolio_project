@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables';
 
 /*  css reset  */
 html {
@@ -145,17 +145,17 @@ section {
 }
 
 
-@import 'mainHeading';
-@import 'header';
-@import 'home';
-@import 'about';
-@import 'aboutInfo';
-@import 'quote';
-@import 'skills';
-@import 'portfolio';
-@import 'blog';
-@import 'contact';
-@import 'footer';
-@import 'scrollUpIcon';
-@import 'subPages';
-@import 'mediaQueries';
+@use 'mainHeading';
+@use 'header';
+@use 'home';
+@use 'about';
+@use 'aboutInfo';
+@use 'quote';
+@use 'skills';
+@use 'portfolio';
+@use 'blog';
+@use 'contact';
+@use 'footer';
+@use 'scrollUpIcon';
+@use 'subPages';
+@use 'mediaQueries';

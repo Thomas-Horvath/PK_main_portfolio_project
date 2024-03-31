@@ -638,7 +638,7 @@ section {
   padding: 2rem 5rem;
   min-height: 600px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/img/qoute_section-bg.jpg");
-  background-size: cover/contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -996,6 +996,7 @@ section {
   justify-content: space-between;
   align-items: center;
   border-radius: 0.25rem;
+  box-shadow: 4px 5px 8px #111111;
 }
 .blog-content .content-top {
   display: flex;
@@ -1352,7 +1353,7 @@ textarea.form-input {
 .policy h2 {
   color: #f5b32f;
   margin-bottom: 2rem;
-  font-size: 1.1;
+  font-size: 1.1rem;
 }
 .policy p {
   margin-bottom: 2rem;
@@ -1373,7 +1374,7 @@ textarea.form-input {
 .cookies h2 {
   color: #f5b32f;
   margin-bottom: 2rem;
-  font-size: 1.1;
+  font-size: 1.1rem;
 }
 .cookies p {
   margin-bottom: 2rem;
@@ -1453,7 +1454,7 @@ textarea.form-input {
     font-size: 1.2rem;
   }
   .policy h2 {
-    font-size: 1.5;
+    font-size: 1.5rem;
   }
   .policy p {
     font-size: 1.2rem;
@@ -1463,7 +1464,7 @@ textarea.form-input {
     margin-bottom: 3rem;
   }
   .cookies h2 {
-    font-size: 1.5;
+    font-size: 1.5rem;
   }
   .cookies p,
   .cookies a {
@@ -1559,7 +1560,7 @@ textarea.form-input {
   }
   .skill-container {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2.1fr);
+    grid-template-rows: repeat(2, 1fr);
     padding: 1rem 3rem;
     gap: 2rem;
     max-width: 1400px;
