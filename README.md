@@ -3,11 +3,14 @@
 ## Github Pages Link: [ThomasHorvath.hu](https://thomas-horvath.github.io/PK_main_portfolio_project/)
 
 ## Project description:
-#### Swiper Js 
+#### SwiperJs
 - I used swiperjs to display the carousel of the blog section.
 [SwiperJs website here](https://swiperjs.com/)
 #### Normalize.css
 -  You can download the normalize css if you run the ```npm install``` command on nodejs terminal.
+#### Emailjs
+- I used the emailjs service for the messaging function of the contact form. 
+[EmailJs website here](https://www.emailjs.com/)
 #### Other
 - During the design of the page, I took the following aspects into account:
 
@@ -41,7 +44,8 @@
 ### JavaScript
 - Modul import, datas from other .js file
 - Rendering HTML elements, template literals
-### Bootstrap-icons
-### Font Awesome
-### Google Fonts
- 
+### Bootstrap icons
+### Font Awesome icons
+### Google Fonts 
+- Poppins
+- ProtestRiot
