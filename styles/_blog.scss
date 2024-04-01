@@ -1,6 +1,7 @@
 .blog {
     padding: 4rem 0 2rem;
     background: var(--bg-dark-light);
+    text-align: center;
 
 }
 
@@ -13,7 +14,7 @@
     padding-top: 4rem;
     min-height: 60vh;
     width: 100%;
-    background-image: $blog-linear, url('../assets/img/blog-bg.jpg');
+    background-image: $blog-linear, url('../assets/img/blog-bg.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

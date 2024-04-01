@@ -3,16 +3,22 @@
 ## Github Pages Link: [ThomasHorvath.hu](https://thomas-horvath.github.io/PK_main_portfolio_project/)
 
 ## Project description:
-During the design of the page, I took the following aspects into account:
+#### Swiper Js 
+- I used swiperjs to display the carousel of the blog section.
+[SwiperJs website here](https://swiperjs.com/)
+#### Normalize.css
+-  You can download the normalize css if you run the ```npm install``` command on nodejs terminal.
+#### Other
+- During the design of the page, I took the following aspects into account:
 
-- Mobile-first design
-- Responsive layout
-- Accessibility (contrasts, font sizes)
-- User experience
-- Dark mode
-- Presentation in two languages
-- Use of Sass css
-- Interactive solutions with javascript
+    - Mobile-first design
+    - Responsive layout
+    - Accessibility (contrasts, font sizes)
+    - User experience
+    - Dark mode
+    - Presentation in two languages
+    - Use of Sass css
+    - Interactive solutions with javascript
 
 ## Technologies Used:
 ### HTML    
@@ -38,5 +44,4 @@ During the design of the page, I took the following aspects into account:
 ### Bootstrap-icons
 ### Font Awesome
 ### Google Fonts
-
-
+ 

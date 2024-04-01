@@ -1,6 +1,6 @@
 import projects from "../datas/projects.js";  // portfolio projects' datas
-import projectsEnglish from "../datas/projectsEnglish.js";  // portfolio projects' datas
-import loginDatas from "../datas/emailjs_datas.js";
+import projectsEnglish from "../datas/projectsEnglish.js";  // portfolio projects' datas in english
+import loginDatas from "../datas/emailjs_datas.js"; // emailjs' login datas
 
 
 
@@ -87,7 +87,9 @@ if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '
 
 
 
-// Logo color change
+// Main logo color change
+//I can't change the color of the svg image with css when dragging the mouse over it. 
+//I could only solve it with javascript.
 
 const logoImage = document.querySelector('.js-main-logo');
 
@@ -102,7 +104,8 @@ if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '
     var whiteColorSrc = './assets/img/Logo_Thomas_light.png';
     var mainColorSrc = './assets/img/Logo_Thomas_main_color.svg';
 
-} else if (currentPage === '/PK_main_portfolio_project/en/index.html' || currentPage === '/en/index.html' || currentPage === '/en/PK_main_portfolio_project/') {
+} else if (currentPage === '/PK_main_portfolio_project/en/index.html' || currentPage === '/en/index.html' || currentPage === '/en/PK_main_portfolio_project/'
+||  currentPage === '/PK_main_portfolio_project/en/projects.html' || currentPage === '/en/projects.html') {
     
     whiteColorSrc = '../assets/img/Logo_Thomas_light.png';
     mainColorSrc = '../assets/img/Logo_Thomas_main_color.svg';
@@ -124,7 +127,7 @@ logoImage.addEventListener('mouseleave', () => {
 if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/'
 || currentPage === '/PK_main_portfolio_project/en/index.html' || currentPage === '/en/index.html' || currentPage === '/en/PK_main_portfolio_project/') {
 
-    const gallery = new Swiper(".gallery_slider", {
+    const gallery = new Swiper(".blog_slider", {
 
         slidesPerView: getInitialSlidesPerView(),
         spaceBetween: 20,
@@ -139,7 +142,7 @@ if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '
 
         },
         pagination: {
-            el: ".gallery_slider-pagination",
+            el: ".blog_slider-pagination",
             clickable: true,
         },
 
@@ -321,7 +324,7 @@ function cardRenderEnglish(page, data) {
     <div class="portfolio-content">
         <p class="portfolio-description">${data.cardDescription}</p>
         <h4 class="portfolio-details">${data.technolgies}</h4>
-        <div class="btn btn-portfolio">Részletek <i class="fa-solid fa-up-right-from-square"></i>
+        <div class="btn btn-portfolio">Details <i class="fa-solid fa-up-right-from-square"></i>
         </div>
     </div>
 
@@ -333,9 +336,9 @@ function cardRenderEnglish(page, data) {
             <img src=${data.imageSrc} alt=${data.imageAlt}>
             <div class="content-container">
                 <div class="portfolio-popup-content-description">
-                <h3>A projekt leírása:</h3>
+                <h3>Project description:</h3>
                     <p>${data.popupDescription}</p>
-                    <h3>A felhasznált technikák:</h3>
+                    <h3>The techniques used are:</h3>
                     <ul>
                        ${data.listItem1}
                        ${data.listItem2}
@@ -344,7 +347,7 @@ function cardRenderEnglish(page, data) {
                        ${data.listItem5}
                        ${data.listItem6}
                     </ul>
-                    <h3>A projekt típusa:</h3>
+                    <h3>Type of project:</h3>
                     <p>${data.type}</p>
                 </div>
                 <div class="portfolio-popup-btn-group">
@@ -369,7 +372,7 @@ function cardRenderEnglish(page, data) {
 
 
 
-// rendering cards
+// rendering project cards
 if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/') {
     projects.slice(0, 3).forEach(data => {
         cardRender(mainPageCardWrapper, data);

@@ -1,4 +1,4 @@
-@use 'variables';
+@import 'variables';
 
 /*  css reset  */
 html {
@@ -31,7 +31,7 @@ img {
     width: 100%;
 }
 
-/*  Button */
+/*  Buttons */
 %btn-attributs {
     display: flex;
     align-items: center;
@@ -145,17 +145,17 @@ section {
 }
 
 
-@use 'mainHeading';
-@use 'header';
-@use 'home';
-@use 'about';
-@use 'aboutInfo';
-@use 'quote';
-@use 'skills';
-@use 'portfolio';
-@use 'blog';
-@use 'contact';
-@use 'footer';
-@use 'scrollUpIcon';
-@use 'subPages';
-@use 'mediaQueries';
+@import 'mainHeading';
+@import 'header';
+@import 'home';
+@import 'about';
+@import 'aboutInfo';
+@import 'quote';
+@import 'skills';
+@import 'portfolio';
+@import 'blog';
+@import 'contact';
+@import 'footer';
+@import 'scrollUpIcon';
+@import 'subPages';
+@import 'mediaQueries';
