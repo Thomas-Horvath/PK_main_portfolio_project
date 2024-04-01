@@ -36,7 +36,7 @@
 ### Sass
 - Variables
 - Nesting
-- '@use'
+- '@import'
 - '@extend'
 ### JavaScript
 - Modul import, datas from other .js file
