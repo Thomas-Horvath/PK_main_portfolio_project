@@ -261,15 +261,16 @@ section {
 .nav {
   position: fixed;
   right: 0;
-  top: 0;
   width: 100%;
   height: auto;
   background-color: #191919;
   padding: 1rem 2rem 2rem;
   overflow-y: auto;
   z-index: 1;
-  transform: translateY(-110%);
+  top: -110%;
+  visibility: hidden;
   border-bottom: 1px solid rgba(245, 179, 47, 0.5490196078);
+  transition: top 0.4s ease, visibility 0.4s ease;
 }
 
 .nav-logo-img {
@@ -330,8 +331,8 @@ section {
 }
 
 .openHamburgerMenu {
-  transition: transform 0.4s ease;
-  transform: translateY(0);
+  top: 0;
+  visibility: visible;
 }
 
 .home {
@@ -1477,17 +1478,16 @@ textarea.form-input {
     display: none;
   }
   .nav {
-    position: relative;
+    position: static;
     background: transparent;
     display: flex;
     justify-content: end;
     align-items: center;
     gap: 1rem;
     padding: 0;
-    transform: translateY(0);
     border: none;
     padding: 0 2rem;
-    transition: all 0s;
+    visibility: visible;
   }
   .nav .hamburger-btn-close,
   .nav .nav-logo-img {

@@ -17,11 +17,13 @@
     min-width: 220px;
     margin: auto;
 }
+
 .logo {
     display: flex;
     align-items: center;
     height: 100%;
 }
+
 .nav-logo-img {
     height: 3rem;
 }
@@ -73,16 +75,16 @@
 .nav {
     position: fixed;
     right: 0;
-    top: 0;
     width: 100%;
     height: auto;
     background-color: $bg-dark;
     padding: 1rem 2rem 2rem;
     overflow-y: auto;
     z-index: 1;
-    
-    transform: translateY(-110%);
+    top: -110%;
+    visibility: hidden;
     border-bottom: 1px solid $main-color-55;
+    transition: top .4s ease, visibility .4s ease;
 }
 
 .nav-logo-img {
@@ -124,12 +126,12 @@
 
 .nav-link:hover {
     color: $main-color;
-   
+
 }
 
 .nav-link.active {
     color: $main-color;
-   
+
 }
 
 
@@ -150,8 +152,6 @@
 }
 
 .openHamburgerMenu {
-    // display: none;
-    transition: transform .4s ease;
-    transform: translateY(0);
-   
+    top: 0;
+    visibility: visible;
 }

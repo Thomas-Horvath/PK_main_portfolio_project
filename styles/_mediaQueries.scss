@@ -1,4 +1,5 @@
 @media (min-width: 768px) {
+
     section {
         padding-top: 4rem;
     }
@@ -121,17 +122,16 @@
     }
 
     .nav {
-        position: relative;
+        position: static;
         background: transparent;
         display: flex;
         justify-content: end;
         align-items: center;
         gap: 1rem;
         padding: 0;
-        transform: translateY(0);
         border: none;
         padding: 0 2rem;
-        transition: all 0s;
+        visibility: visible;
 
         .hamburger-btn-close,
 

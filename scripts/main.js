@@ -3,16 +3,19 @@ import loginData from "../data/emailjs_data.js"; // emailjs' login data
 // hamburger menu 
 const closeButton = document.querySelector('.js-hamburger-close-btn');
 const openButton = document.querySelector('.js-hamburger-open-btn');
-const nav = document.querySelector('.js-nav');
 const currentPage = window.location.pathname;
 console.log(currentPage);
 
 
+const nav = document.querySelector('.js-nav');
 function toggleNavClass() {
     nav.classList.toggle('openHamburgerMenu');
+
 };
 openButton.addEventListener('click', toggleNavClass);
 closeButton.addEventListener('click', toggleNavClass);
+
+
 
 
 // menu links hover
@@ -223,10 +226,7 @@ function initializeEventListeners() {
         });
     });
 
-    const navLinks = document.querySelectorAll('.js-nav-link');
-    navLinks.forEach((link) => {
-        link.addEventListener('click', toggleNavClass);
-    });
+
 
     //portfolio  popup window
 
@@ -257,6 +257,13 @@ function initializeEventListeners() {
     modalCloses.forEach((modalClose, i) => {
         modalClose.addEventListener("click", () => {
             closeModal(i);
+        });
+    });
+
+    const navLinks = document.querySelectorAll('.js-nav-link');
+    navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            nav.classList.remove("openHamburgerMenu");
         });
     });
 
