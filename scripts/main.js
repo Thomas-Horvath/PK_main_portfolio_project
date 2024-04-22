@@ -20,7 +20,7 @@ closeButton.addEventListener('click', toggleNavClass);
 
 // menu links hover
 
-if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/') {
+if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/' || currentPage === '/') {
     const sections = document.querySelectorAll(".section-link");
 
     window.addEventListener('scroll', () => {
@@ -100,7 +100,7 @@ logoImage.addEventListener('mouseleave', () => {
 
 
 // blog swiper script  
-if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/') {
+if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/' || currentPage === '/') {
 
     const blog = new Swiper(".blog_slider", {
 
@@ -193,7 +193,7 @@ function sendEmail(e) {
         }
     );
 }
-if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/') {
+if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/' || currentPage === '/') {
     contactForm.addEventListener("submit", sendEmail);
 };
 

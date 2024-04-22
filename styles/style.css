@@ -47,7 +47,7 @@ body {
   font-family: "Poppins-regular", sans-serif;
   background-color: #191919;
   color: #ddd;
-  min-width: 350px;
+  min-width: 330px;
 }
 
 li {
@@ -237,7 +237,7 @@ section {
 }
 .icons img {
   width: 40px;
-  display: flex;
+  display: none;
   align-self: center;
   transition: transform 0.2s ease, color 0.3s ease;
 }

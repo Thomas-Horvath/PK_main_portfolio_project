@@ -7,7 +7,7 @@ import projectsEnglish from "../data/projectsEnglish.js";
 const currentPage = window.location.pathname;
 
 const button = document.querySelector(".js-lang-selector");
-const navContent = document.querySelector(".nav-links");
+//const navContent = document.querySelector(".nav-links");
 const homeContent = document.querySelector(".home");
 const aboutHeaderContent = document.querySelector(".about-main-heading");
 const aboutSectionContent = document.querySelector(".about-section");
@@ -22,15 +22,25 @@ const projectPageCardWrapper = document.querySelector('.js-projectPage-card-wrap
 let lang = "hun";
 
 const render = (data) => {
-
-    navContent.innerHTML = `
-    <li><a class="nav-link js-nav-link active" href="#home">${data.nav.link1}</a></li>
-    <li><a class="nav-link js-nav-link" href="#about">${data.nav.link2}</a></li>
-    <li><a class="nav-link js-nav-link" href="#skills">${data.nav.link3}</a></li>
-    <li><a class="nav-link js-nav-link" href="#portfolio">${data.nav.link4}</a></li>
-    <li><a class="nav-link js-nav-link" href="#blog">${data.nav.link5}</a></li>
-    <li><a class="nav-link js-nav-link" href="#contact">${data.nav.link6}</a></li>
-    `
+    // if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/') {
+    //     navContent.innerHTML = `
+    // <li><a class="nav-link js-nav-link active" href="#home">${data.nav.link1}</a></li>
+    // <li><a class="nav-link js-nav-link" href="#about">${data.nav.link2}</a></li>
+    // <li><a class="nav-link js-nav-link" href="#skills">${data.nav.link3}</a></li>
+    // <li><a class="nav-link js-nav-link" href="#portfolio">${data.nav.link4}</a></li>
+    // <li><a class="nav-link js-nav-link" href="#blog">${data.nav.link5}</a></li>
+    // <li><a class="nav-link js-nav-link" href="#contact">${data.nav.link6}</a></li>
+    // `
+    // } else {
+    //     navContent.innerHTML = `
+    // <li><a class="nav-link js-nav-link active" href="../index.html">${data.nav.link1}</a></li>
+    // <li><a class="nav-link js-nav-link" href="../index.html/#about">${data.nav.link2}</a></li>
+    // <li><a class="nav-link js-nav-link" href="../index.html/#skills">${data.nav.link3}</a></li>
+    // <li><a class="nav-link js-nav-link" href="../index.html/#portfolio">${data.nav.link4}</a></li>
+    // <li><a class="nav-link js-nav-link" href="../index.html/#blog">${data.nav.link5}</a></li>
+    // <li><a class="nav-link js-nav-link" href="../index.html/#contact">${data.nav.link6}</a></li>
+    // `
+    // }
 
     homeContent.innerHTML = `
     <h1>${data.home.name}</h1>
@@ -172,59 +182,69 @@ function cardRender(obj, page, numberOfItems = obj.length) {
 
 </div>
 
-`;
+`
         page.innerHTML += content;
     }
 };
 
 
-if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/') {
-    button.addEventListener('click', () => {
-        if (lang === "hun") {
-            lang = "en";
-        } else {
-            lang = "hun"
-        }
-        mainPageCardWrapper.innerHTML = "";
-        if (lang === "hun") {
-            render(hunText);
-            cardRender(projects, mainPageCardWrapper, 3);
-            button.src = "./assets/img/great-britain-flag.png";
-        } else if (lang === "en") {
-            render(enText);
-            cardRender(projectsEnglish, mainPageCardWrapper, 3);
-            button.src = "./assets/img/hungarian-flag.png";
-        }
-        console.log(lang);
-        initializeEventListeners();
-    });
+// if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/') {
+//     button.addEventListener('click', () => {
+//         if (lang === "hun") {
+//             lang = "en";
+//         } else {
+//             lang = "hun"
+//         }
+//         mainPageCardWrapper.innerHTML = "";
+//         if (lang === "hun") {
+//             render(hunText);
+//             cardRender(projects, mainPageCardWrapper, 3);
+//             button.src = "./assets/img/great-britain-flag.png";
+//         } else if (lang === "en") {
+//             render(enText);
+//             cardRender(projectsEnglish, mainPageCardWrapper, 3);
+//             button.src = "./assets/img/hungarian-flag.png";
+//         }
+//         console.log(lang);
+//         initializeEventListeners();
+//     });
 
+//     render(hunText);
+//     cardRender(projects, mainPageCardWrapper, 3);
+//     initializeEventListeners();
+
+// } else {
+//     button.addEventListener('click', () => {
+//         if (lang === "hun") {
+//             lang = "en";
+//         } else {
+//             lang = "hun"
+//         }
+
+//         projectPageCardWrapper.innerHTML = "";
+//         if (lang === "hun") {
+//             render(hunText);
+//             cardRender(projects, projectPageCardWrapper);
+//             button.src = "./assets/img/great-britain-flag.png";
+//         } else if (lang === "en") {
+//             render(enText);
+//             cardRender(projectsEnglish, projectPageCardWrapper);
+//             button.src = "./assets/img/hungarian-flag.png";
+//         }
+//         console.log(lang);
+//         initializeEventListeners();
+//     });
+//     render(hunText);
+//     cardRender(projectsEnglish, projectPageCardWrapper);
+//     initializeEventListeners();
+// }
+
+if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '/index.html' || currentPage === '/PK_main_portfolio_project/' || currentPage === '/') {
     render(hunText);
     cardRender(projects, mainPageCardWrapper, 3);
     initializeEventListeners();
-
-} else {
-    button.addEventListener('click', () => {
-        if (lang === "hun") {
-            lang = "en";
-        } else {
-            lang = "hun"
-        }
-
-        projectPageCardWrapper.innerHTML = "";
-        if (lang === "hun") {
-            render(hunText);
-            cardRender(projects, projectPageCardWrapper);
-            button.src = "./assets/img/great-britain-flag.png";
-        } else if (lang === "en") {
-            render(enText);
-            cardRender(projectsEnglish, projectPageCardWrapper);
-            button.src = "./assets/img/hungarian-flag.png";
-        }
-        console.log(lang);
-        initializeEventListeners();
-    });
-    render(hunText);
-    cardRender(projectsEnglish, projectPageCardWrapper);
+} else  {
+    cardRender(projects, projectPageCardWrapper);
     initializeEventListeners();
 }
+
