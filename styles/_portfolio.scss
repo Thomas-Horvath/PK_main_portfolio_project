@@ -37,7 +37,7 @@
 
 .wave-reverse {
     margin-bottom: -10px;
-   
+
 }
 
 
@@ -113,6 +113,7 @@
         font-size: 1.3rem;
         letter-spacing: .1rem;
     }
+
     .portfolio-popup-header {
         text-align: center;
     }
@@ -190,7 +191,6 @@
 
 
 
-
 .activePopUp {
     visibility: visible;
     opacity: 1;
@@ -210,7 +210,7 @@
 
 .project-btn-group {
     display: flex;
-   justify-content: center;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
@@ -221,4 +221,9 @@
     .btn-secund {
         width: 80%;
     }
+
+}
+.select-active {
+    background-color: #2A2A30;
+    color: #f5b32f;
 }

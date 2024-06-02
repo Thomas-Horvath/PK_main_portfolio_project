@@ -926,6 +926,11 @@ section {
   width: 80%;
 }
 
+.select-active {
+  background-color: #2A2A30;
+  color: #f5b32f;
+}
+
 .blog {
   padding: 4rem 0 2rem;
   background: var(--bg-dark-light);

@@ -74,15 +74,17 @@
 
         <div class="portfolio-wrapper">
             <div class="project-btn-group">
-                <a href="" class="btn">Weboldalak</a>
-                <a href="" class="btn">Adatbázisok</a>
-                <a href="" class="btn">Szerverek</a>
-                <a href="" class="btn">Alkalmazások</a>
+                <div class="btn js-project-btn select-active" data-category="All" >Összes</div>
+                <div class="btn js-project-btn" data-category="Weboldal">Weboldalak</div>
+                <div class="btn js-project-btn" data-category="Back-end">Szerverek</div>
+                <div class="btn js-project-btn" data-category="Alkalmazás">Alkalmazások</div>
             </div>
-            <div class="card-wrapper js-projectPage-card-wrapper"></div>
+            <div class="card-wrapper js-projectPage-card-wrapper">
+
+            </div>
             <div class="pagination js-pagination">
-                <button class="pagination-btn btn activeBtn">1</button>
-                <button class="pagination-btn btn">2</button>
+                <!-- <button class="pagination-btn btn activeBtn">1</button>
+                <button class="pagination-btn btn">2</button> -->
 
             </div>
         </div>
@@ -128,7 +130,7 @@
 
     <a class="scrollUp" href="#" title="Ugrás a lap tetejére"><i class="fa-solid fa-arrow-up"></i></a>
 
-    <script type="module" src="./scripts/languageChoose.js"></script>
+    <script type="module" src="./scripts/projectsPage.js"></script>
     <script type="module" src="./scripts/main.js"></script>
 </body>
 

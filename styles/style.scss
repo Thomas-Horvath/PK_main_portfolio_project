@@ -10,7 +10,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    user-select: none; 
+    user-select: none;
     text-decoration: none;
     list-style: none;
 }
@@ -57,8 +57,10 @@ img {
     background-color: $main-color;
     color: $btn-color-dark;
     border: 2px solid $main-color;
-   
 }
+
+
+
 .btn-secund {
     @extend %btn-attributs;
     background-color: $btn-color-dark;
@@ -72,6 +74,7 @@ img {
     box-shadow: none;
 
 }
+
 .btn-secund:hover {
     border: 2px solid $main-color;
     box-shadow: none;
@@ -90,10 +93,12 @@ img {
     border-radius: .25rem;
     transition: .3s;
 }
-.btn::after{
-    @extend %btn-after-attributes; 
+
+.btn::after {
+    @extend %btn-after-attributes;
     background: #242424;
 }
+
 .btn-secund::after {
     @extend %btn-after-attributes;
     background: #242424;
@@ -101,11 +106,12 @@ img {
 }
 
 .btn:hover::after {
-    transform: scale(1);  
+    transform: scale(1);
     box-shadow: 0 0 11px 4px $main-color-55;
 }
+
 .btn-secund:hover::after {
-    transform: scale(1);  
+    transform: scale(1);
     box-shadow: 0 0 11px 4px $main-color-55;
 }
 
@@ -143,6 +149,7 @@ section {
     min-height: 100vh;
     padding-top: 3rem;
 }
+
 
 
 @import 'mainHeading';

@@ -1,5 +1,6 @@
 import loginData from "../data/emailjs_data.js"; // emailjs' login data
 
+
 // hamburger menu 
 const closeButton = document.querySelector('.js-hamburger-close-btn');
 const openButton = document.querySelector('.js-hamburger-open-btn');
@@ -203,73 +204,35 @@ if (currentPage === '/PK_main_portfolio_project/index.html' || currentPage === '
 
 
 // About info 
-function initializeEventListeners() {
-    const infoBoxes = document.querySelectorAll('.info-title');
 
-    infoBoxes.forEach((box) => {
+const infoBoxes = document.querySelectorAll('.info-title');
 
-        const icon = box.querySelector('.title-icon');
-        const content = box.nextElementSibling;
+infoBoxes.forEach((box) => {
 
-        box.addEventListener('click', function () {
+    const icon = box.querySelector('.title-icon');
+    const content = box.nextElementSibling;
 
-            const isDisplayBlock = content.classList.contains('displayBlock');
+    box.addEventListener('click', function () {
 
-            document.querySelectorAll('.info-content').forEach(item => item.classList.remove('displayBlock'));
+        const isDisplayBlock = content.classList.contains('displayBlock');
 
-            document.querySelectorAll('.title-icon').forEach(item => item.classList.replace('fa-circle-arrow-up', 'fa-circle-arrow-down'));
+        document.querySelectorAll('.info-content').forEach(item => item.classList.remove('displayBlock'));
+
+        document.querySelectorAll('.title-icon').forEach(item => item.classList.replace('fa-circle-arrow-up', 'fa-circle-arrow-down'));
 
 
-            content.classList.toggle('displayBlock', !isDisplayBlock);
-            icon.classList.toggle('fa-circle-arrow-up', !isDisplayBlock);
-            icon.classList.toggle('fa-circle-arrow-down', isDisplayBlock);
-        });
+        content.classList.toggle('displayBlock', !isDisplayBlock);
+        icon.classList.toggle('fa-circle-arrow-up', !isDisplayBlock);
+        icon.classList.toggle('fa-circle-arrow-down', isDisplayBlock);
     });
+});
 
 
 
-    //portfolio  popup window
-
-    let modalViews = document.querySelectorAll(".portfolio-popup"),
-        modalBtns = document.querySelectorAll(".btn-portfolio"),
-        modalCloses = document.querySelectorAll(".close-btn");
+//portfolio  popup window
 
 
-    let modal = function (modalClick) {
-        modalViews[modalClick].classList.add("activePopUp");
-        modalViews[modalClick].addEventListener("click", function (e) {
-            if (e.target === this) {
-                closeModal(modalClick);
-            };
-        });
-    };
 
-    let closeModal = function (modalClick) {
-        modalViews[modalClick].classList.remove("activePopUp");
-    };
-
-
-    modalBtns.forEach((modalBtn, i) => {
-        modalBtn.addEventListener('click', () => {
-            modal(i);
-        });
-    });
-    modalCloses.forEach((modalClose, i) => {
-        modalClose.addEventListener("click", () => {
-            closeModal(i);
-        });
-    });
-
-    const navLinks = document.querySelectorAll('.js-nav-link');
-    navLinks.forEach((link) => {
-        link.addEventListener('click', () => {
-            nav.classList.remove("openHamburgerMenu");
-        });
-    });
-
-};
-
-export default initializeEventListeners;
 
 
 
