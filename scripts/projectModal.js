@@ -32,7 +32,7 @@ export function initializeNavLinks() {
     const navLinks = document.querySelectorAll('.js-nav-link');
     navLinks.forEach((link) => {
         link.addEventListener('click', () => {
-            const nav = document.querySelector('.nav'); // Add this line to define the nav element
+            const nav = document.querySelector('.nav'); 
             nav.classList.remove("openHamburgerMenu");
         });
     });
